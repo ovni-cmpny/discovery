@@ -1,569 +1,2465 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ovni Cmpny: Wix ou Shopify</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#E8E9E5; --panel:#F4F5F2; --ink:#000; --ink-2:#55595D; --rule:#B9BCB6;
-  --signal:#E84A00; --wix:#000; --shop:#7A7E82; --focus:#E84A00;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#131415; --panel:#1C1D1F; --ink:#EEEFEB; --ink-2:#A3A7AA; --rule:#3A3C3F;
-    --signal:#FF6B26; --wix:#EEEFEB; --shop:#85898D; --focus:#FF6B26;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#131415; --panel:#1C1D1F; --ink:#EEEFEB; --ink-2:#A3A7AA; --rule:#3A3C3F;
-  --signal:#FF6B26; --wix:#EEEFEB; --shop:#85898D; --focus:#FF6B26;
-}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  font-size:1.0625rem;line-height:1.55;font-variation-settings:"wdth" 100;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
-.prose{max-width:68ch}
-a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
-a:hover{color:var(--signal)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Ovni Cmpny: Wix ou Shopify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #e8e9e5;
+        --panel: #f4f5f2;
+        --ink: #000;
+        --ink-2: #55595d;
+        --rule: #b9bcb6;
+        --signal: #e84a00;
+        --wix: #000;
+        --shop: #7a7e82;
+        --focus: #e84a00;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #131415;
+          --panel: #1c1d1f;
+          --ink: #eeefeb;
+          --ink-2: #a3a7aa;
+          --rule: #3a3c3f;
+          --signal: #ff6b26;
+          --wix: #eeefeb;
+          --shop: #85898d;
+          --focus: #ff6b26;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #131415;
+        --panel: #1c1d1f;
+        --ink: #eeefeb;
+        --ink-2: #a3a7aa;
+        --rule: #3a3c3f;
+        --signal: #ff6b26;
+        --wix: #eeefeb;
+        --shop: #85898d;
+        --focus: #ff6b26;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      html {
+        scroll-padding-top: env(safe-area-inset-top, 0px);
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "Archivo",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Arial,
+          sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.55;
+        font-variation-settings: "wdth" 100;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      .prose {
+        max-width: 68ch;
+      }
+      a {
+        color: inherit;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        color: var(--signal);
+      }
+      :focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+      }
 
-/* header */
-.masthead{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
-  padding:1.25rem 0;border-bottom:1px solid var(--ink);font-size:.9rem;flex-wrap:wrap}
-.masthead strong{font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em}
-.masthead span{color:var(--ink-2)}
+      /* header */
+      .masthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--ink);
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+      }
+      .masthead strong {
+        font-variation-settings: "wdth" 125;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .masthead span {
+        color: var(--ink-2);
+      }
 
-.hero{padding:4.5rem 0 3rem}
-.hero h1{
-  margin:0;font-weight:900;line-height:.86;letter-spacing:-.02em;
-  font-size:clamp(3.4rem,13vw,10.5rem);font-variation-settings:"wdth" 125;
-}
-.hero h1 .ou{display:block;font-weight:300;font-variation-settings:"wdth" 62;font-size:.42em;
-  line-height:1;margin:.15em 0 .05em;color:var(--ink-2)}
-.hero .lead{margin-top:2.25rem;font-size:1.25rem;line-height:1.5;max-width:60ch}
-.toc{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:2rem;font-size:.95rem}
-.toc a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+      .hero {
+        padding: 4.5rem 0 3rem;
+      }
+      .hero h1 {
+        margin: 0;
+        font-weight: 900;
+        line-height: 0.86;
+        letter-spacing: -0.02em;
+        font-size: clamp(3.4rem, 13vw, 10.5rem);
+        font-variation-settings: "wdth" 125;
+      }
+      .hero h1 .ou {
+        display: block;
+        font-weight: 300;
+        font-variation-settings: "wdth" 62;
+        font-size: 0.42em;
+        line-height: 1;
+        margin: 0.15em 0 0.05em;
+        color: var(--ink-2);
+      }
+      .hero .lead {
+        margin-top: 2.25rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        max-width: 60ch;
+      }
+      .toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        margin-top: 2rem;
+        font-size: 0.95rem;
+      }
+      .toc a {
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 2px;
+      }
 
-section{padding:3.5rem 0;border-top:1px solid var(--rule)}
-h2{margin:0 0 1.25rem;font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1;font-weight:800;
-  font-variation-settings:"wdth" 118;letter-spacing:-.01em}
-h3{margin:2rem 0 .5rem;font-size:1.15rem;font-weight:700}
-p{margin:0 0 1rem}
-.muted{color:var(--ink-2)}
-.small{font-size:.9rem}
+      section {
+        padding: 3.5rem 0;
+        border-top: 1px solid var(--rule);
+      }
+      h2 {
+        margin: 0 0 1.25rem;
+        font-size: clamp(1.8rem, 4.2vw, 2.8rem);
+        line-height: 1;
+        font-weight: 800;
+        font-variation-settings: "wdth" 118;
+        letter-spacing: -0.01em;
+      }
+      h3 {
+        margin: 2rem 0 0.5rem;
+        font-size: 1.15rem;
+        font-weight: 700;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      .muted {
+        color: var(--ink-2);
+      }
+      .small {
+        font-size: 0.9rem;
+      }
 
-.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;margin-top:1.5rem}
-.findings h3{margin-top:0}
+      .findings {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+        gap: 2rem 3rem;
+        margin-top: 1.5rem;
+      }
+      .findings h3 {
+        margin-top: 0;
+      }
 
-/* tables */
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.25rem 0}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem;font-variant-numeric:tabular-nums}
-th,td{text-align:left;vertical-align:top;padding:.75rem 1rem;border-bottom:1px solid var(--rule)}
-th:first-child,td:first-child{padding-left:0}
-th:last-child,td:last-child{padding-right:0}
-thead th{font-weight:700;border-bottom:1px solid var(--ink);font-size:.9rem}
-td.num,th.num{text-align:right;white-space:nowrap}
-td.num + td,th.num + th{padding-left:2rem}
-.t-hoje col.c1{width:30%}.t-hoje col.c2{width:18%}
-tbody th{font-weight:600}
+      /* tables */
+      .scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 1.25rem 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 560px;
+        font-size: 0.95rem;
+        font-variant-numeric: tabular-nums;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--rule);
+      }
+      th:first-child,
+      td:first-child {
+        padding-left: 0;
+      }
+      th:last-child,
+      td:last-child {
+        padding-right: 0;
+      }
+      thead th {
+        font-weight: 700;
+        border-bottom: 1px solid var(--ink);
+        font-size: 0.9rem;
+      }
+      td.num,
+      th.num {
+        text-align: right;
+        white-space: nowrap;
+      }
+      td.num + td,
+      th.num + th {
+        padding-left: 2rem;
+      }
+      .t-hoje col.c1 {
+        width: 28%;
+      }
+      .chartwrap {
+        margin: 1.5rem 0 1.75rem;
+      }
+      svg.chart {
+        display: block;
+        width: 100%;
+        min-width: 560px;
+        height: auto;
+        font-family: inherit;
+        font-variant-numeric: tabular-nums;
+      }
+      svg.chart .ax {
+        font-size: 12px;
+        fill: var(--ink-2);
+      }
+      svg.chart .yr {
+        font-size: 12px;
+        font-weight: 700;
+        fill: var(--ink);
+      }
+      svg.chart .pl {
+        font-size: 12px;
+        font-weight: 700;
+        fill: var(--ink);
+      }
+      svg.chart .pv {
+        font-size: 12px;
+        fill: var(--ink-2);
+      }
+      svg.chart .pz {
+        font-size: 12px;
+        font-weight: 700;
+        fill: var(--signal);
+      }
+      tbody th {
+        font-weight: 600;
+      }
 
-/* simulator */
-.sim{background:var(--panel);border:1px solid var(--ink);padding:1.75rem;margin-top:1.5rem}
-.presets{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
-button.chip{font:inherit;font-size:.9rem;background:transparent;color:var(--ink);
-  border:1px solid var(--ink);padding:.45rem .8rem;cursor:pointer;border-radius:999px}
-button.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.simgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:2.5rem}
-.simgrid>*{min-width:0}
-@media (max-width:1000px){.simgrid{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:560px){.sim{padding:1.1rem}}
-.field{margin-bottom:1.1rem;display:flex;flex-direction:column;min-width:0}
-.field label{display:flex;justify-content:space-between;gap:1rem;font-size:.92rem;font-weight:600;margin-bottom:.35rem}
-.field label output{font-weight:700;font-variant-numeric:tabular-nums}
-input[type=range]{box-sizing:border-box;width:100%;margin:0;accent-color:var(--signal)}
-input[type=number],select{box-sizing:border-box;font:inherit;width:100%;min-width:0;max-width:100%;padding:.5rem .6rem;background:var(--bg);color:var(--ink);
-  border:1px solid var(--rule);border-radius:0}
-.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem 1.25rem;align-items:end}
-@media (max-width:480px){.row2{grid-template-columns:minmax(0,1fr)}}
-details{margin-top:.5rem;border-top:1px solid var(--rule);padding-top:.75rem}
-summary{cursor:pointer;font-weight:600;font-size:.92rem}
-.warn{color:var(--signal);font-size:.88rem;min-height:1.2em}
+      /* simulator */
+      .sim {
+        background: var(--panel);
+        border: 1px solid var(--ink);
+        padding: 1.75rem;
+        margin-top: 1.5rem;
+      }
+      .presets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      button.chip {
+        font: inherit;
+        font-size: 0.9rem;
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--ink);
+        padding: 0.45rem 0.8rem;
+        cursor: pointer;
+        border-radius: 999px;
+      }
+      button.chip[aria-pressed="true"] {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      .simgrid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+        gap: 2.5rem;
+      }
+      .simgrid > * {
+        min-width: 0;
+      }
+      @media (max-width: 1000px) {
+        .simgrid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .sim {
+          padding: 1.1rem;
+        }
+      }
+      .field {
+        margin-bottom: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .field label {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+      .field label output {
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+      input[type="range"] {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        accent-color: var(--signal);
+      }
+      input[type="number"],
+      select {
+        box-sizing: border-box;
+        font: inherit;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 0.5rem 0.6rem;
+        background: var(--bg);
+        color: var(--ink);
+        border: 1px solid var(--rule);
+        border-radius: 0;
+      }
+      .row2 {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1rem 1.25rem;
+        align-items: end;
+      }
+      @media (max-width: 480px) {
+        .row2 {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+      details {
+        margin-top: 0.5rem;
+        border-top: 1px solid var(--rule);
+        padding-top: 0.75rem;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.92rem;
+      }
+      .warn {
+        color: var(--signal);
+        font-size: 0.88rem;
+        min-height: 1.2em;
+      }
 
-.verdict{font-size:1.05rem;margin-bottom:1.25rem}
-.big{display:block;font-weight:900;font-size:clamp(2.6rem,7vw,4.2rem);line-height:.95;
-  font-variation-settings:"wdth" 125;font-variant-numeric:tabular-nums;margin:.2rem 0 .4rem}
-.bars{margin:1.25rem 0 1.5rem}
-.bar{display:grid;grid-template-columns:4.5rem minmax(0,1fr) auto;align-items:center;gap:.75rem;margin:.45rem 0;font-size:.92rem}
-.bar .track{height:14px;background:transparent;border:1px solid var(--rule)}
-.bar .fill{height:100%;width:0;transition:width .35s ease}
-.bar.wix .fill{background:var(--wix)}
-.bar.shop .fill{background:repeating-linear-gradient(135deg,var(--shop) 0 3px,transparent 3px 6px);border-right:2px solid var(--shop)}
-.bar b{text-align:right;font-variant-numeric:tabular-nums}
-.breakdown table{min-width:0}
-.breakdown tfoot td,.breakdown tfoot th{font-weight:800;border-bottom:1px solid var(--ink);border-top:1px solid var(--ink)}
+      .verdict {
+        font-size: 1.05rem;
+        margin-bottom: 1.25rem;
+      }
+      .big {
+        display: block;
+        font-weight: 900;
+        font-size: clamp(2.6rem, 7vw, 4.2rem);
+        line-height: 0.95;
+        font-variation-settings: "wdth" 125;
+        font-variant-numeric: tabular-nums;
+        margin: 0.2rem 0 0.4rem;
+      }
+      .bars {
+        margin: 1.25rem 0 1.5rem;
+      }
+      .bar {
+        display: grid;
+        grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0.45rem 0;
+        font-size: 0.92rem;
+      }
+      .bar .track {
+        height: 14px;
+        background: transparent;
+        border: 1px solid var(--rule);
+      }
+      .bar .fill {
+        height: 100%;
+        width: 0;
+        transition: width 0.35s ease;
+      }
+      .bar.wix .fill {
+        background: var(--wix);
+      }
+      .bar.shop .fill {
+        background: repeating-linear-gradient(
+          135deg,
+          var(--shop) 0 3px,
+          transparent 3px 6px
+        );
+        border-right: 2px solid var(--shop);
+      }
+      .bar b {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+      .breakdown table {
+        min-width: 0;
+      }
+      .breakdown tfoot td,
+      .breakdown tfoot th {
+        font-weight: 800;
+        border-bottom: 1px solid var(--ink);
+        border-top: 1px solid var(--ink);
+      }
 
-/* approaches */
-.tag{display:inline-block;font-size:.8rem;font-weight:700;padding:.1rem .5rem;border:1px solid currentColor;border-radius:999px;white-space:nowrap}
-.tag.off{color:var(--ink-2)}
+      /* approaches */
+      .tag {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.1rem 0.5rem;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .tag.off {
+        color: var(--ink-2);
+      }
 
-/* decisions */
-.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 .5rem}
-.decisions{list-style:none;margin:1rem 0 0;padding:0}
-.decisions li{display:grid;grid-template-columns:minmax(0,1fr) 11rem;gap:1.5rem;padding:1.25rem 0;border-bottom:1px solid var(--rule)}
-.decisions li[hidden]{display:none}
-@media (max-width:640px){.decisions li{grid-template-columns:1fr;gap:.5rem}}
-.decisions h3{margin:0 0 .35rem;font-size:1.05rem}
-.decisions p{margin:0;color:var(--ink-2);font-size:.95rem}
-.owner{font-size:.9rem;font-weight:700;display:flex;align-items:flex-start;gap:.5rem}
-.owner::before{content:"";flex:none;width:.7rem;height:.7rem;margin-top:.35rem;border-radius:50%;border:2px solid var(--signal)}
-.owner[data-o="rafaela"]::before{background:var(--signal)}
+      /* decisions */
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0 0.5rem;
+      }
+      .decisions {
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 0;
+      }
+      .decisions li {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 11rem;
+        gap: 1.5rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      .decisions li[hidden] {
+        display: none;
+      }
+      @media (max-width: 640px) {
+        .decisions li {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+      }
+      .decisions h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1.05rem;
+      }
+      .decisions p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 0.95rem;
+      }
+      .owner {
+        font-size: 0.9rem;
+        font-weight: 700;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .owner::before {
+        content: "";
+        flex: none;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-top: 0.35rem;
+        border-radius: 50%;
+        border: 2px solid var(--signal);
+      }
+      .owner[data-o="rafaela"]::before {
+        background: var(--signal);
+      }
 
-.sources li{margin-bottom:.4rem;font-size:.92rem}
-footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--ink);font-size:.88rem;color:var(--ink-2)}
+      .sources li {
+        margin-bottom: 0.4rem;
+        font-size: 0.92rem;
+      }
+      footer {
+        padding: 2.5rem 0 3.5rem;
+        border-top: 1px solid var(--ink);
+        font-size: 0.88rem;
+        color: var(--ink-2);
+      }
 
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
 
-@media print{
-  :root{--bg:#fff;--panel:#fff;--ink:#000;--ink-2:#444;--rule:#bbb;padding:0}
-  .toc,.filters,.presets{display:none}
-  section{padding:1.5rem 0;break-inside:auto}
-  .sim,.decisions li,table{break-inside:avoid}
-  .hero{padding:1.5rem 0}
-  .decisions li[hidden]{display:grid}
-  a{text-decoration:none}
-}
-</style>
-</head>
-<body>
-<div class="wrap">
+      @media print {
+        :root {
+          --bg: #fff;
+          --panel: #fff;
+          --ink: #000;
+          --ink-2: #444;
+          --rule: #bbb;
+          padding: 0;
+        }
+        .toc,
+        .filters,
+        .presets {
+          display: none;
+        }
+        section {
+          padding: 1.5rem 0;
+          break-inside: auto;
+        }
+        .sim,
+        .decisions li,
+        table {
+          break-inside: avoid;
+        }
+        .hero {
+          padding: 1.5rem 0;
+        }
+        .decisions li[hidden] {
+          display: grid;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="masthead">
+        <strong>OVNI CMPNY</strong>
+        <span
+          >Discovery de plataforma, setembro de 2026. Preparado por Paula
+          (front-end) para Rafaela (CEO)</span
+        >
+      </header>
 
-<header class="masthead">
-  <strong>OVNI CMPNY</strong>
-  <span>Discovery de plataforma, setembro de 2026. Preparado por Paula (front-end) para Rafaela (CEO)</span>
-</header>
+      <div class="hero">
+        <h1>Wix<span class="ou">ou</span>Shopify</h1>
+        <p class="lead">
+          Este documento responde duas perguntas antes da reconstrução do
+          ovni.company: se o novo front-end, inspirado na grade da Gufram, é
+          viável em cada plataforma, e quanto custa receber pagamentos em cada
+          uma. A parte técnica está resolvida. A escolha final depende de
+          decisões de negócio, listadas no fim da página.
+        </p>
+        <nav class="toc" aria-label="Seções">
+          <a href="#resumo">Resumo</a>
+          <a href="#hoje">Como a loja vende hoje</a>
+          <a href="#taxas">Taxas</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#front">Front-end</a>
+          <a href="#decisoes">Decisões em aberto</a>
+          <a href="#fontes">Fontes</a>
+        </nav>
+      </div>
 
-<div class="hero">
-  <h1>Wix<span class="ou">ou</span>Shopify</h1>
-  <p class="lead">Este documento responde duas perguntas antes da reconstrução do ovni.company: se o novo front-end, inspirado na grade da Gufram, é viável em cada plataforma, e quanto custa receber pagamentos em cada uma. A parte técnica está resolvida. A escolha final depende de decisões de negócio, listadas no fim da página.</p>
-  <nav class="toc" aria-label="Seções">
-    <a href="#resumo">Resumo</a>
-    <a href="#hoje">Como a loja vende hoje</a>
-    <a href="#taxas">Taxas</a>
-    <a href="#simulador">Simulador</a>
-    <a href="#front">Front-end</a>
-    <a href="#decisoes">Decisões em aberto</a>
-    <a href="#fontes">Fontes</a>
-  </nav>
-</div>
-
-<section id="resumo">
-  <h2>Resumo</h2>
-  <div class="findings">
-    <div>
-      <h3>O front-end cabe nas duas</h3>
-      <p>A grade de produtos no estilo Gufram pode ser construída tanto no Wix Studio quanto num tema customizado do Shopify. A diferença está em como a equipe edita o site depois e em quanto o design fica protegido contra mudanças acidentais.</p>
-    </div>
-    <div>
-      <h3>O Shopify cobra duas vezes por venda no Brasil</h3>
-      <p>O Shopify Payments não funciona no Brasil. Toda venda passa por um gateway externo, uma empresa de pagamentos que a própria Ovni escolhe e negocia (como Mercado Pago ou Pagar.me), e a Shopify cobra uma taxa extra sobre ela: 2% no plano Basic. No Wix, com o Wix Pagamentos, não existe essa taxa extra.</p>
-    </div>
-    <div>
-      <h3>Com o volume atual, as taxas quase não pesam</h3>
-      <p>A loja vendeu cerca de R$ 8.250 em quase três anos. Nesse ritmo, a diferença de taxa entre as plataformas ficaria na casa de algumas centenas de reais no período todo, dependendo das taxas do gateway escolhido. Ela só passa a pesar se o relançamento aumentar bastante as vendas. Por isso a meta de faturamento é a decisão mais importante.</p>
-    </div>
-  </div>
-</section>
-
-<section id="hoje">
-  <h2>Como a loja vende hoje</h2>
-  <p class="prose">Dados da exportação de Finanças &gt; Pagamentos do Wix: 16 transações entre setembro de 2021 e julho de 2024, todas pelo Wix Pagamentos. Duas de R$ 1,00 parecem testes e foram excluídas.</p>
-  <div class="scroll">
-    <table class="t-hoje">
-      <colgroup><col class="c1"><col class="c2"><col></colgroup>
-      <thead><tr><th>Indicador</th><th class="num">Valor</th><th>Observação</th></tr></thead>
-      <tbody>
-        <tr><th>Vendas reais</th><td class="num">14</td><td>Última venda em julho de 2024</td></tr>
-        <tr><th>Faturamento no período</th><td class="num">R$ 8.249</td><td>Média de cerca de R$ 240 por mês entre set/2021 e jul/2024</td></tr>
-        <tr><th>Ticket médio</th><td class="num">R$ 589</td><td>Valor cobrado, incluindo frete quando houve</td></tr>
-        <tr><th>Cartão de crédito</th><td class="num">93% do valor</td><td>R$ 7.686 em 12 das 14 vendas (86% das vendas). 8 delas parceladas, de 2x a 5x</td></tr>
-        <tr><th>Pix</th><td class="num">7% do valor</td><td>R$ 563 em 2 das 14 vendas (14% das vendas)</td></tr>
-        <tr><th>Boleto</th><td class="num">0% do valor</td><td>Nenhuma venda</td></tr>
-        <tr><th>Pagamentos recusados</th><td class="num">3</td><td>Todos no cartão, de 2 clientes. Um pagou depois com sucesso. O outro tentou duas vezes e não concluiu a compra pelo site</td></tr>
-        <tr><th>Taxas pagas ao Wix</th><td class="num">R$ 294</td><td>Cartão: 3,7% + R$ 0,30 por venda, o que deu cerca de 3,75% efetivo. A mesma taxa valeu para as vendas parceladas. Pix: 0,95%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="prose small muted">Este relatório só inclui pagamentos que passaram pelo site. Vendas feitas por Instagram, WhatsApp ou Pix direto não aparecem aqui.</p>
-</section>
-
-<section id="taxas">
-  <h2>Quanto custa vender em cada plataforma</h2>
-  <div class="scroll">
-    <table>
-      <thead><tr><th></th><th>Wix (Wix Pagamentos Brasil)</th><th>Shopify (gateway externo)</th></tr></thead>
-      <tbody>
-        <tr><th>Cartão de crédito</th><td>3,7% + R$ 0,30 por venda. Aceita apenas cartões emitidos no Brasil</td><td>Gateway: faixa de mercado de 2,99% a 4,99% no crédito à vista, mais uma tarifa fixa que varia por gateway (em torno de R$ 0,40 em alguns). Mais a taxa da Shopify</td></tr>
-        <tr><th>Pix</th><td>0,95%</td><td>Gateway: 0,49% a 1,49%, mais a taxa da Shopify</td></tr>
-        <tr><th>Boleto</th><td>R$ 2,99 por boleto pago</td><td>Gateway: R$ 1,99 a R$ 3,99, mais a taxa da Shopify</td></tr>
-        <tr><th>Taxa da plataforma sobre cada venda</th><td>Não há</td><td>2% no Basic, 1% no Grow, 0,6% no Advanced</td></tr>
-        <tr><th>Mensalidade</th><td>Core US$ 29 e Business US$ 39 por mês. Preço sujeito à localização, ao ciclo de cobrança e a promoções</td><td>Basic US$ 39, Grow US$ 105, Advanced US$ 399 por mês. No plano anual: US$ 29, 79 e 299</td></tr>
-        <tr><th>Recebimento</th><td>Cartão: repasse padrão 30 dias após a compra. Vendas parceladas são repassadas conforme as parcelas. Antecipação disponível mediante taxa. Pix na hora. Boleto em até 3 dias úteis após a confirmação</td><td>Depende do gateway escolhido e do que for negociado</td></tr>
-        <tr><th>Parcelamento</th><td>Sim. A taxa é a mesma do crédito à vista, como mostram as vendas parceladas da Ovni</td><td>Sim, pelo gateway. A taxa costuma subir com o número de parcelas e muda bastante entre gateways, a menos que os juros sejam repassados ao cliente</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="prose small muted">As taxas de gateway no Shopify são faixas de mercado. As taxas de cartão são negociáveis, então vale pedir cotação ao Mercado Pago, Pagar.me e PagBank antes de decidir.</p>
-
-  <div class="prose gateway">
-    <h3>O que é o gateway externo no Shopify</h3>
-    <p>No Brasil, o Shopify não processa pagamentos sozinho. Toda loja precisa contratar uma empresa de pagamentos separada, o gateway, que se conecta ao Shopify como um aplicativo. É por ela que entram cartão, Pix e boleto.</p>
-    <p>Exemplos de gateways usados com Shopify no Brasil: <strong>Mercado Pago, Pagar.me, PagBank, Appmax, PagBrasil e EBANX</strong>.</p>
-    <h3>Onde ver a lista oficial de gateways disponíveis</h3>
-    <p>A Shopify mantém uma <a href="https://www.shopify.com/br/gateways-de-pagamento">página oficial de provedores de pagamento</a>. Nela, basta digitar "Brasil" no filtro por país para ver os provedores que atendem o Brasil.</p>
-    <p>A lista definitiva, com o que realmente pode ser ativado para a Ovni, fica dentro do Shopify. É possível criar uma conta de teste gratuita, configurar o endereço da loja no Brasil e abrir <strong>Configurações &gt; Pagamentos</strong>. Ali aparecem os gateways disponíveis. Segundo a própria Shopify, integrar um gateway não tem custo: cada gateway cobra as próprias taxas.</p>
-    <p>Um detalhe que muda a experiência do cliente: em alguns gateways o pagamento acontece dentro do checkout da loja. Em outros, o cliente é levado para a página do gateway e depois volta. Isso pode variar até entre cartão, Pix e boleto no mesmo gateway, e é um dos pontos da verificação técnica.</p>
-    <p>Isso significa que a escolha e a negociação ficam com a Ovni. A Rafaela pode comparar as propostas e negociar diretamente com essas empresas. Alguns publicam uma tabela de taxas fixa (Mercado Pago e PagBank, por exemplo). Outros, como Pagar.me e Cielo, fazem proposta sob medida conforme o volume.</p>
-    <p>Pontos para comparar entre as propostas:</p>
-    <div class="scroll">
-      <table>
-        <thead><tr><th>Ponto</th><th>Por que importa para a Ovni</th></tr></thead>
-        <tbody>
-          <tr><th>Taxa no cartão à vista e parcelado</th><td>93% do faturamento veio do cartão (12 de 14 vendas), e 8 dessas 12 foram parceladas, somando 75% do valor vendido no cartão</td></tr>
-          <tr><th>Taxa no Pix e no boleto</th><td>O Pix não teve nenhuma recusa e costuma ser o meio mais barato</td></tr>
-          <tr><th>Prazo de repasse e custo da antecipação</th><td>Define quando o dinheiro de cada venda cai na conta</td></tr>
-          <tr><th>Antifraude e aprovação de cartões</th><td>Hoje, 3 tentativas no cartão foram recusadas, e uma venda se perdeu por isso</td></tr>
-          <tr><th>Mensalidade ou tarifa fixa do gateway</th><td>Com poucas vendas por mês, uma tarifa fixa pesa mais que a taxa percentual</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Um ponto não muda com a negociação: além do que o gateway cobrar, a Shopify cobra a própria taxa sobre cada venda por usar um gateway externo (2% no plano Basic). Negociar com o gateway reduz só a parte dele.</p>
-    <p>No Wix a situação é diferente: o Wix Pagamentos já vem embutido. A Ovni também poderia usar PagBank ou Mercado Pago no Wix, e mesmo assim não haveria taxa extra da plataforma.</p>
-
-    <h3>Gateways que mais fazem sentido para a Ovni</h3>
-    <p>A própria Shopify publicou em agosto de 2026 uma <a href="https://www.shopify.com/br/blog/melhores-gateways-de-pagamento">comparação de gateways</a> com taxas de referência, prós e contras. Filtrando pelo perfil da Ovni (loja pequena, vendas no Brasil, muito parcelamento, Pix com peso crescente), quatro fazem mais sentido. As taxas abaixo são valores de partida divulgados; a taxa final depende do prazo de recebimento e da negociação.</p>
-  </div>
-  <div class="scroll">
-    <table>
-      <thead><tr><th>Gateway</th><th>Taxas de referência</th><th>Por que considerar</th><th>Pontos de atenção</th></tr></thead>
-      <tbody>
-        <tr><th>Mercado Pago</th><td>De 0,99% a 4,99%, conforme o meio de pagamento e o prazo de recebimento, mais tarifa fixa por venda</td><td>Integração oficial com a Shopify. Pix, boleto e cartão. Muito conhecido pelo comprador brasileiro. Sem mensalidade</td><td>O checkout transparente exige integração via API. A taxa sobe quanto mais rápido se quer receber</td></tr>
-        <tr><th>PagBank</th><td>Cartão a partir de 3,99% + R$ 0,40 (recebendo em 30 dias). Pix a partir de 1,89%. Boleto R$ 3,49</td><td>Voltado a pequenas e médias empresas. Integração oficial. Parcelamento em até 12x. Sem mensalidade no checkout</td><td>Pix mais caro que nos concorrentes. Recursos variam conforme o conector usado</td></tr>
-        <tr><th>Pagar.me</th><td>Cartão a partir de 4,39%. Pix a partir de 1,19%. Boleto R$ 3,49. Tem plano negociável</td><td>Checkout transparente e bom antifraude. Relatórios de conciliação</td><td>Pensado para operações médias e grandes. Não publica tabela completa</td></tr>
-        <tr><th>Stripe</th><td>Cartão nacional 3,99% + R$ 0,39. Pix 1,19%. Boleto R$ 3,45. Cartão internacional com cerca de 2% a mais</td><td>Tabela pública e clara. Aceita cartões estrangeiros, o que o Wix Pagamentos não aceita. Útil se a Ovni quiser vender para fora</td><td>Recursos avançados exigem conhecimento técnico. Menos tradicional entre compradores brasileiros</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="prose gateway">
-    <p class="small muted">Ficaram de fora: o Shopify Payments, que não está disponível no Brasil; a Cielo, voltada a empresas médias e grandes com lojas físicas e sem tabela pública; e o PayPal, com taxa de cartão mais alta (4,79% + tarifa fixa) e pouca base de usuários no Brasil. Nenhum dos quatro publica a taxa do parcelado de forma simples: esse é o número mais importante a pedir na cotação, já que 75% do valor vendido no cartão pela Ovni foi parcelado.</p>
-  </div>
-</section>
-
-<section id="simulador">
-  <h2>Simulador</h2>
-  <p class="prose">Ajuste o faturamento e o mix de pagamentos para ver o custo mensal em cada plataforma. Os valores iniciais usam o mix real da loja, calculado pelo valor vendido (93% cartão e 7% Pix), e não pelo número de vendas.</p>
-
-  <div class="sim">
-    <div class="presets" role="group" aria-label="Cenários prontos">
-      <button class="chip" data-rev="240">Ritmo atual, R$ 240/mês</button>
-      <button class="chip" data-rev="3000">R$ 3 mil/mês</button>
-      <button class="chip" data-rev="10000" aria-pressed="true">R$ 10 mil/mês</button>
-      <button class="chip" data-rev="30000">R$ 30 mil/mês</button>
-    </div>
-
-    <div class="simgrid">
-      <form id="simform" onsubmit="return false">
-        <div class="field">
-          <label for="rev">Faturamento mensal <output id="revOut"></output></label>
-          <input type="range" id="rev" min="0" max="50000" step="100" value="10000">
-        </div>
-        <div class="field">
-          <label for="card">Faturamento no cartão <output id="cardOut"></output></label>
-          <input type="range" id="card" min="0" max="100" step="1" value="93">
-        </div>
-        <div class="field">
-          <label for="pix">Faturamento no Pix <output id="pixOut"></output></label>
-          <input type="range" id="pix" min="0" max="100" step="1" value="7">
-        </div>
-        <p class="small muted" id="boletoLine"></p>
-        <p class="warn" id="mixWarn" role="status"></p>
-
-        <div class="row2">
-          <div class="field">
-            <label for="shopPlan">Plano Shopify</label>
-            <select id="shopPlan">
-              <option value="basic">Basic</option>
-              <option value="grow">Grow</option>
-              <option value="advanced">Advanced</option>
-            </select>
+      <section id="resumo">
+        <h2>Resumo</h2>
+        <div class="findings">
+          <div>
+            <h3>O front-end cabe nas duas</h3>
+            <p>
+              A grade de produtos no estilo Gufram pode ser construída tanto no
+              Wix Studio quanto num tema customizado do Shopify. A diferença
+              está em como a equipe edita o site depois e em quanto o design
+              fica protegido contra mudanças acidentais.
+            </p>
           </div>
-          <div class="field">
-            <label for="billing">Cobrança Shopify</label>
-            <select id="billing">
-              <option value="monthly">Mensal</option>
-              <option value="annual">Anual</option>
-            </select>
+          <div>
+            <h3>O Shopify cobra duas vezes por venda no Brasil</h3>
+            <p>
+              O Shopify Payments não funciona no Brasil. Toda venda passa por um
+              gateway externo, uma empresa de pagamentos que a própria Ovni
+              escolhe e negocia (como Mercado Pago ou Pagar.me), e a Shopify
+              cobra uma taxa extra sobre ela: 2% no plano Basic. No Wix, com o
+              Wix Pagamentos, não existe essa taxa extra.
+            </p>
+          </div>
+          <div>
+            <h3>As vendas cresceram, e depois pararam</h3>
+            <p>
+              De outubro de 2024 a dezembro de 2025, a loja vendeu R$ 19,5 mil,
+              cerca de R$ 1.300 por mês, contra R$ 8,2 mil nos três anos
+              anteriores. Desde janeiro de 2026, não há vendas pelo site.
+            </p>
+          </div>
+          <div>
+            <h3>Com os custos reais, o Wix sai mais barato</h3>
+            <p>
+              O plano atual da loja no Wix custa cerca de R$ 32 por mês, cobrado
+              em reais, mais R$ 9,90 do app de frete. Com as premissas padrão do
+              simulador, o Wix sai mais barato em qualquer faturamento: cerca de
+              R$ 85 contra R$ 169 por mês no ritmo de 2024–2025, e cerca de R$
+              380 contra R$ 790 com R$ 10 mil por mês. A escolha pelo Shopify
+              teria que se justificar pelo front-end, pelo checkout ou pelo
+              crescimento, não pelo custo.
+            </p>
           </div>
         </div>
+      </section>
 
-        <details>
-          <summary>Premissas</summary>
-          <div class="field" style="margin-top:1rem"><label for="gwPreset">Preencher taxas do gateway com</label>
-            <select id="gwPreset">
-              <option value="">Exemplo genérico (4% à vista, R$ 0,39, Pix 1%, boleto R$ 2,99)</option>
-              <option value="stripe">Stripe, tabela pública</option>
-              <option value="pagbank">PagBank, taxas de partida</option>
-              <option value="pagarme">Pagar.me, taxas de partida</option>
-            </select></div>
-          <p class="small muted" id="presetNote">As referências preenchem crédito à vista, tarifa fixa, Pix e boleto. O parcelado continua como premissa, porque nenhum desses gateways publica essa taxa de forma simples.</p>
-          <div class="row2" style="margin-top:1rem">
-            <div class="field"><label for="ticket">Ticket médio no cartão (R$)</label><input type="number" id="ticket" value="640" min="1" step="1"></div><div class="field"><label for="ticketBol">Ticket médio no boleto (R$)</label><input type="number" id="ticketBol" value="589" min="1" step="1"></div>
-            <div class="field"><label for="usd">Dólar (R$)</label><input type="number" id="usd" value="5.50" min="1" step="0.05"></div>
-            <div class="field"><label for="wixUsd">Plano Wix (US$/mês)</label><input type="number" id="wixUsd" value="39" min="0" step="1"></div>
-            <div class="field"><label for="margin">Margem antes das taxas de pagamento (%)</label><input type="number" id="margin" value="50" min="1" max="100" step="1"></div>
-            <div class="field"><label for="parc">Cartão parcelado (% do valor no cartão)</label><input type="number" id="parc" value="75" min="0" max="100" step="1"></div><div class="field"><label for="gwCard">Gateway, crédito à vista (%)</label><input type="number" id="gwCard" value="4" min="0" step="0.1"></div><div class="field"><label for="gwParc">Gateway, crédito parcelado (%)</label><input type="number" id="gwParc" value="6" min="0" step="0.1"></div><div class="field"><label for="gwFix">Gateway, tarifa fixa por venda no cartão (R$)</label><input type="number" id="gwFix" value="0.39" min="0" step="0.01"></div>
-            <div class="field"><label for="gwPix">Gateway, Pix (%)</label><input type="number" id="gwPix" value="1" min="0" step="0.1"></div><div class="field"><label for="gwBol">Gateway, boleto (R$ por boleto)</label><input type="number" id="gwBol" value="2.99" min="0" step="0.01"></div>
-          </div>
-          <p class="small muted">Os valores de gateway são exemplos para simulação, não taxas de um gateway específico. Substitua pelos números das propostas recebidas. O parcelado usa uma taxa média única; na prática ela muda com o número de parcelas e com quem paga os juros. Os 75% vêm do histórico da Ovni, calculados pelos valores individuais: R$ 5.791 dos R$ 7.686 vendidos no cartão foram parcelados. Por quantidade, foram 8 de 12 vendas (67%). No Wix, a taxa do parcelado é a mesma do à vista. O número de vendas é estimado dividindo o faturamento de cada meio pelo ticket informado (R$ 640 no cartão, pelo histórico; no boleto, sem histórico, usa-se o ticket geral de R$ 589), então as tarifas fixas por venda são aproximadas. O simulador não inclui apps pagos nem antecipação de recebíveis.</p>
-        </details>
-      </form>
-
-      <div aria-live="polite">
-        <p class="small muted" style="margin:0 0 .5rem">Cenário ilustrativo, calculado com as premissas ao lado.</p>
-        <p class="verdict" id="verdict"></p>
-        <div class="bars">
-          <div class="bar wix"><span>Wix</span><div class="track"><div class="fill" id="barWix"></div></div><b id="totWix"></b></div>
-          <div class="bar shop"><span>Shopify</span><div class="track"><div class="fill" id="barShop"></div></div><b id="totShop"></b></div>
+      <section id="hoje">
+        <h2>Como a loja vende hoje</h2>
+        <p class="prose">
+          Dados de dois relatórios de Finanças &gt; Pagamentos do Wix, que
+          juntos cobrem de setembro de 2021 até hoje. Todas as vendas passaram
+          pelo Wix Pagamentos. Três pagamentos de R$ 1,00 eram testes e foram
+          excluídos. Não há vendas entre o fim de julho e o fim de outubro de
+          2024 (da venda de 25/07 à de 29/10), nem a partir de janeiro de 2026.
+        </p>
+        <div class="scroll chartwrap">
+          <svg
+            class="chart"
+            viewBox="0 0 660 330"
+            role="img"
+            aria-labelledby="chartTitle chartDesc"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title id="chartTitle">
+              Vendas pelo site por trimestre, do 4º trimestre de 2021 ao 3º
+              trimestre de 2026
+            </title>
+            <desc id="chartDesc">
+              Vendas baixas e irregulares até meados de 2024, retomada a partir
+              do 4º trimestre de 2024 com pico de cerca de R$ 7,5 mil no 4º
+              trimestre de 2025, e nenhuma venda em 2026.
+            </desc>
+            <defs>
+              <pattern
+                id="hatch"
+                width="6"
+                height="6"
+                patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)"
+              >
+                <rect width="6" height="6" style="fill: var(--bg)" />
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="6"
+                  style="stroke: var(--shop); stroke-width: 3"
+                />
+              </pattern>
+            </defs>
+            <line
+              x1="74"
+              x2="648"
+              y1="272.0"
+              y2="272.0"
+              style="stroke: var(--rule); stroke-width: 1"
+            />
+            <text x="66" y="276.0" text-anchor="end" class="ax">R$ 0</text>
+            <line
+              x1="74"
+              x2="648"
+              y1="216.0"
+              y2="216.0"
+              style="stroke: var(--rule); stroke-width: 1"
+            />
+            <text x="66" y="220.0" text-anchor="end" class="ax">R$ 2 mil</text>
+            <line
+              x1="74"
+              x2="648"
+              y1="160.0"
+              y2="160.0"
+              style="stroke: var(--rule); stroke-width: 1"
+            />
+            <text x="66" y="164.0" text-anchor="end" class="ax">R$ 4 mil</text>
+            <line
+              x1="74"
+              x2="648"
+              y1="104.0"
+              y2="104.0"
+              style="stroke: var(--rule); stroke-width: 1"
+            />
+            <text x="66" y="108.0" text-anchor="end" class="ax">R$ 6 mil</text>
+            <line
+              x1="74"
+              x2="648"
+              y1="48.0"
+              y2="48.0"
+              style="stroke: var(--rule); stroke-width: 1"
+            />
+            <text x="66" y="52.0" text-anchor="end" class="ax">R$ 8 mil</text>
+            <text x="74.0" y="18" class="pl">set/2021 a jul/2024</text>
+            <text x="74.0" y="34" class="pv">R$ 8,2 mil em 14 vendas</text>
+            <text x="418.4" y="18" class="pl">out/2024 a dez/2025</text>
+            <text x="418.4" y="34" class="pv">R$ 19,5 mil em 21 vendas</text>
+            <line
+              x1="416.4"
+              x2="416.4"
+              y1="42"
+              y2="272"
+              style="stroke: var(--ink); stroke-width: 1; stroke-dasharray: 3 3"
+            />
+            <line
+              x1="559.9"
+              x2="559.9"
+              y1="42"
+              y2="272"
+              style="
+                stroke: var(--signal);
+                stroke-width: 1;
+                stroke-dasharray: 3 3;
+              "
+            />
+            <text x="565.9" y="238.4" class="pz">2026:</text>
+            <text x="565.9" y="253.4" class="pz">nenhuma</text>
+            <text x="565.9" y="268.4" class="pz">venda</text>
+            <rect
+              x="79.5"
+              y="255.9"
+              width="17.8"
+              height="16.1"
+              style="fill: var(--wix)"
+            >
+              <title>T4 2021: cartão R$ 575</title>
+            </rect>
+            <rect
+              x="79.5"
+              y="240.1"
+              width="17.8"
+              height="15.8"
+              style="fill: url(#hatch); stroke: var(--shop); stroke-width: 1"
+            >
+              <title>T4 2021: Pix R$ 563</title>
+            </rect>
+            <text x="88.3" y="288" text-anchor="middle" class="ax">T4</text>
+            <rect
+              x="108.2"
+              y="264.8"
+              width="17.8"
+              height="7.2"
+              style="fill: var(--wix)"
+            >
+              <title>T1 2022: cartão R$ 258</title>
+            </rect>
+            <text x="117.0" y="288" text-anchor="middle" class="ax">T1</text>
+            <rect
+              x="136.9"
+              y="244.3"
+              width="17.8"
+              height="27.7"
+              style="fill: var(--wix)"
+            >
+              <title>T2 2022: cartão R$ 988</title>
+            </rect>
+            <text x="145.8" y="288" text-anchor="middle" class="ax">T2</text>
+            <rect
+              x="165.6"
+              y="251.2"
+              width="17.8"
+              height="20.8"
+              style="fill: var(--wix)"
+            >
+              <title>T3 2022: cartão R$ 743</title>
+            </rect>
+            <text x="174.4" y="288" text-anchor="middle" class="ax">T3</text>
+            <rect
+              x="194.3"
+              y="243.9"
+              width="17.8"
+              height="28.1"
+              style="fill: var(--wix)"
+            >
+              <title>T4 2022: cartão R$ 1.005</title>
+            </rect>
+            <text x="203.2" y="288" text-anchor="middle" class="ax">T4</text>
+            <rect
+              x="223.0"
+              y="251.2"
+              width="17.8"
+              height="20.8"
+              style="fill: var(--wix)"
+            >
+              <title>T1 2023: cartão R$ 743</title>
+            </rect>
+            <text x="231.8" y="288" text-anchor="middle" class="ax">T1</text>
+            <text x="260.6" y="288" text-anchor="middle" class="ax">T2</text>
+            <rect
+              x="280.4"
+              y="230.0"
+              width="17.8"
+              height="42.0"
+              style="fill: var(--wix)"
+            >
+              <title>T3 2023: cartão R$ 1.500</title>
+            </rect>
+            <text x="289.2" y="288" text-anchor="middle" class="ax">T3</text>
+            <rect
+              x="309.1"
+              y="259.4"
+              width="17.8"
+              height="12.6"
+              style="fill: var(--wix)"
+            >
+              <title>T4 2023: cartão R$ 450</title>
+            </rect>
+            <text x="318.0" y="288" text-anchor="middle" class="ax">T4</text>
+            <text x="346.7" y="288" text-anchor="middle" class="ax">T1</text>
+            <text x="375.4" y="288" text-anchor="middle" class="ax">T2</text>
+            <rect
+              x="395.2"
+              y="232.1"
+              width="17.8"
+              height="39.9"
+              style="fill: var(--wix)"
+            >
+              <title>T3 2024: cartão R$ 1.425</title>
+            </rect>
+            <text x="404.1" y="288" text-anchor="middle" class="ax">T3</text>
+            <rect
+              x="423.9"
+              y="220.7"
+              width="17.8"
+              height="51.3"
+              style="fill: var(--wix)"
+            >
+              <title>T4 2024: cartão R$ 1.831</title>
+            </rect>
+            <rect
+              x="423.9"
+              y="195.8"
+              width="17.8"
+              height="24.9"
+              style="fill: url(#hatch); stroke: var(--shop); stroke-width: 1"
+            >
+              <title>T4 2024: Pix R$ 890</title>
+            </rect>
+            <text x="432.8" y="288" text-anchor="middle" class="ax">T4</text>
+            <rect
+              x="452.6"
+              y="180.9"
+              width="17.8"
+              height="91.1"
+              style="fill: var(--wix)"
+            >
+              <title>T1 2025: cartão R$ 3.255</title>
+            </rect>
+            <rect
+              x="452.6"
+              y="174.7"
+              width="17.8"
+              height="6.2"
+              style="fill: url(#hatch); stroke: var(--shop); stroke-width: 1"
+            >
+              <title>T1 2025: Pix R$ 220</title>
+            </rect>
+            <text x="461.4" y="288" text-anchor="middle" class="ax">T1</text>
+            <rect
+              x="481.3"
+              y="189.1"
+              width="17.8"
+              height="82.9"
+              style="fill: var(--wix)"
+            >
+              <title>T2 2025: cartão R$ 2.960</title>
+            </rect>
+            <text x="490.2" y="288" text-anchor="middle" class="ax">T2</text>
+            <rect
+              x="510.0"
+              y="206.7"
+              width="17.8"
+              height="65.3"
+              style="fill: var(--wix)"
+            >
+              <title>T3 2025: cartão R$ 2.332</title>
+            </rect>
+            <rect
+              x="510.0"
+              y="192.3"
+              width="17.8"
+              height="14.4"
+              style="fill: url(#hatch); stroke: var(--shop); stroke-width: 1"
+            >
+              <title>T3 2025: Pix R$ 515</title>
+            </rect>
+            <text x="518.9" y="288" text-anchor="middle" class="ax">T3</text>
+            <rect
+              x="538.7"
+              y="89.8"
+              width="17.8"
+              height="182.2"
+              style="fill: var(--wix)"
+            >
+              <title>T4 2025: cartão R$ 6.508</title>
+            </rect>
+            <rect
+              x="538.7"
+              y="62.0"
+              width="17.8"
+              height="27.8"
+              style="fill: url(#hatch); stroke: var(--shop); stroke-width: 1"
+            >
+              <title>T4 2025: Pix R$ 992</title>
+            </rect>
+            <text x="547.6" y="288" text-anchor="middle" class="ax">T4</text>
+            <text x="576.2" y="288" text-anchor="middle" class="ax">T1</text>
+            <text x="605.0" y="288" text-anchor="middle" class="ax">T2</text>
+            <text x="633.6" y="288" text-anchor="middle" class="ax">T3</text>
+            <text x="88.3" y="306" text-anchor="middle" class="yr">2021</text>
+            <text x="160.1" y="306" text-anchor="middle" class="yr">2022</text>
+            <text x="274.9" y="306" text-anchor="middle" class="yr">2023</text>
+            <text x="389.7" y="306" text-anchor="middle" class="yr">2024</text>
+            <text x="504.5" y="306" text-anchor="middle" class="yr">2025</text>
+            <text x="605.0" y="306" text-anchor="middle" class="yr">2026</text>
+            <line
+              x1="74"
+              x2="648"
+              y1="272.0"
+              y2="272.0"
+              style="stroke: var(--ink); stroke-width: 1"
+            />
+            <rect
+              x="74"
+              y="316"
+              width="12"
+              height="10"
+              style="fill: var(--wix)"
+            />
+            <text x="92" y="325" class="ax">Cartão</text>
+            <rect
+              x="154"
+              y="316"
+              width="12"
+              height="10"
+              style="fill: url(#hatch); stroke: var(--shop)"
+            />
+            <text x="172" y="325" class="ax">Pix</text>
+          </svg>
         </div>
-        <div class="scroll breakdown">
-          <table>
-            <thead><tr><th>Custo por mês</th><th class="num">Wix</th><th class="num">Shopify</th></tr></thead>
-            <tbody id="bd"></tbody>
-            <tfoot><tr><th>Total</th><td class="num" id="fWix"></td><td class="num" id="fShop"></td></tr>
-            <tr><th>Total em 12 meses</th><td class="num" id="yWix"></td><td class="num" id="yShop"></td></tr></tfoot>
+        <p class="prose">
+          A loja teve duas fases bem diferentes. Até meados de 2024, as vendas
+          eram poucas e espaçadas. De outubro de 2024 a dezembro de 2025, o
+          faturamento mais que dobrou em menos da metade do tempo, com ticket
+          médio maior e mais parcelamento. Desde janeiro de 2026, não houve
+          nenhuma venda pelo site.
+        </p>
+        <div class="scroll">
+          <table class="t-hoje">
+            <colgroup>
+              <col class="c1" />
+              <col />
+              <col />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Indicador</th>
+                <th class="num">set/2021 a jul/2024</th>
+                <th class="num">out/2024 a dez/2025</th>
+                <th class="num">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Vendas reais</th>
+                <td class="num">14</td>
+                <td class="num">21</td>
+                <td class="num">35</td>
+              </tr>
+              <tr>
+                <th>Faturamento</th>
+                <td class="num">R$ 8.249</td>
+                <td class="num">R$ 19.502</td>
+                <td class="num">R$ 27.751</td>
+              </tr>
+              <tr>
+                <th>Média por mês</th>
+                <td class="num">cerca de R$ 240</td>
+                <td class="num">cerca de R$ 1.300</td>
+                <td class="num">—</td>
+              </tr>
+              <tr>
+                <th>Ticket médio</th>
+                <td class="num">R$ 589</td>
+                <td class="num">R$ 929</td>
+                <td class="num">R$ 793</td>
+              </tr>
+              <tr>
+                <th>Cartão de crédito</th>
+                <td class="num">
+                  93% do valor<br /><span class="muted">12 vendas</span>
+                </td>
+                <td class="num">
+                  87% do valor<br /><span class="muted">17 vendas</span>
+                </td>
+                <td class="num">
+                  89% do valor<br /><span class="muted">29 vendas</span>
+                </td>
+              </tr>
+              <tr>
+                <th>Pix</th>
+                <td class="num">
+                  7% do valor<br /><span class="muted">2 vendas</span>
+                </td>
+                <td class="num">
+                  13% do valor<br /><span class="muted">4 vendas</span>
+                </td>
+                <td class="num">
+                  11% do valor<br /><span class="muted">6 vendas</span>
+                </td>
+              </tr>
+              <tr>
+                <th>Boleto</th>
+                <td class="num">nenhuma</td>
+                <td class="num">nenhuma</td>
+                <td class="num">nenhuma</td>
+              </tr>
+              <tr>
+                <th>Cartão parcelado</th>
+                <td class="num">
+                  75% do valor<br /><span class="muted"
+                    >8 de 12, em 2x a 5x</span
+                  >
+                </td>
+                <td class="num">
+                  84% do valor<br /><span class="muted"
+                    >13 de 17, em até 10x</span
+                  >
+                </td>
+                <td class="num">
+                  81% do valor<br /><span class="muted">21 de 29</span>
+                </td>
+              </tr>
+              <tr>
+                <th>Ticket médio no cartão</th>
+                <td class="num">R$ 640</td>
+                <td class="num">R$ 993</td>
+                <td class="num">R$ 847</td>
+              </tr>
+              <tr>
+                <th>Pagamentos recusados</th>
+                <td class="num">
+                  3<br /><span class="muted">1 venda perdida</span>
+                </td>
+                <td class="num">
+                  2<br /><span class="muted">ambas recuperadas</span>
+                </td>
+                <td class="num">
+                  5<br /><span class="muted">1 venda perdida</span>
+                </td>
+              </tr>
+              <tr>
+                <th>Taxas pagas ao Wix</th>
+                <td class="num">R$ 293</td>
+                <td class="num">R$ 655</td>
+                <td class="num">R$ 948</td>
+              </tr>
+            </tbody>
           </table>
         </div>
-        <p class="small" id="breakeven"></p>
-      </div>
+        <p class="prose small muted">
+          Taxa do cartão no Wix: 3,7% + R$ 0,30 por venda, cerca de 3,74%
+          efetivo no período todo, com a mesma taxa nas vendas parceladas. Pix:
+          0,95%. As recusas foram todas no cartão, de 4 clientes: 3 concluíram a
+          compra depois, e 1 tentou duas vezes sem sucesso. Os relatórios só
+          incluem pagamentos feitos pelo site; vendas por Instagram, WhatsApp ou
+          Pix direto não aparecem. O relatório de recebíveis do Wix confere com
+          o de pagamentos nas transações em comum, mas registra a data em que o
+          dinheiro entrou na conta, parcela por parcela, por isso a análise usa
+          o de pagamentos.
+        </p>
+      </section>
+
+      <section id="taxas">
+        <h2>Quanto custa vender em cada plataforma</h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Wix (Wix Pagamentos Brasil)</th>
+                <th>Shopify (gateway externo)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Cartão de crédito</th>
+                <td>
+                  3,7% + R$ 0,30 por venda. Aceita apenas cartões emitidos no
+                  Brasil
+                </td>
+                <td>
+                  Gateway: faixa de mercado de 2,99% a 4,99% no crédito à vista,
+                  mais uma tarifa fixa que varia por gateway (em torno de R$
+                  0,40 em alguns). Mais a taxa da Shopify
+                </td>
+              </tr>
+              <tr>
+                <th>Pix</th>
+                <td>0,95%</td>
+                <td>Gateway: 0,49% a 1,49%, mais a taxa da Shopify</td>
+              </tr>
+              <tr>
+                <th>Boleto</th>
+                <td>R$ 2,99 por boleto pago</td>
+                <td>Gateway: R$ 1,99 a R$ 3,99, mais a taxa da Shopify</td>
+              </tr>
+              <tr>
+                <th>Taxa da plataforma sobre cada venda</th>
+                <td>Não há</td>
+                <td>2% no Basic, 1% no Grow, 0,6% no Advanced</td>
+              </tr>
+              <tr>
+                <th>Mensalidade</th>
+                <td>
+                  Cobrada em reais. A loja da Ovni está no plano Essencial
+                  anual: R$ 384 por ano, cerca de R$ 32 por mês. Mais o app de
+                  frete dos Correios, R$ 9,90 por mês
+                </td>
+                <td>
+                  Cobrada em dólares, mesmo para lojas no Brasil, então o valor
+                  em reais varia com o câmbio. Basic: US$ 19 por mês (cerca de
+                  R$ 105) ou US$ 14 no plano anual (cerca de R$ 77). Grow: US$
+                  52 (cerca de R$ 286) ou US$ 39 no anual (cerca de R$ 215).
+                  Advanced: US$ 399 (cerca de R$ 2.195) ou US$ 299 no anual
+                  (cerca de R$ 1.645). Conversão com dólar a R$ 5,50. Apps de
+                  frete e outros são cobrados à parte
+                </td>
+              </tr>
+              <tr>
+                <th>Recebimento</th>
+                <td>
+                  Cartão: repasse padrão 30 dias após a compra. Vendas
+                  parceladas são repassadas conforme as parcelas. Antecipação
+                  disponível mediante taxa. Pix na hora. Boleto em até 3 dias
+                  úteis após a confirmação
+                </td>
+                <td>Depende do gateway escolhido e do que for negociado</td>
+              </tr>
+              <tr>
+                <th>Parcelamento</th>
+                <td>
+                  Sim. A taxa é a mesma do crédito à vista, como mostram as
+                  vendas parceladas da Ovni
+                </td>
+                <td>
+                  Sim, pelo gateway. A taxa costuma subir com o número de
+                  parcelas e muda bastante entre gateways, a menos que os juros
+                  sejam repassados ao cliente
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="prose small muted">
+          As taxas de gateway no Shopify são faixas de mercado. As taxas de
+          cartão são negociáveis, então vale pedir cotação ao Mercado Pago,
+          Pagar.me e PagBank antes de decidir.
+        </p>
+
+        <div class="prose gateway">
+          <h3>O que é o gateway externo no Shopify</h3>
+          <p>
+            No Brasil, o Shopify não processa pagamentos sozinho. Toda loja
+            precisa contratar uma empresa de pagamentos separada, o gateway, que
+            se conecta ao Shopify como um aplicativo. É por ela que entram
+            cartão, Pix e boleto.
+          </p>
+          <p>
+            Exemplos de gateways usados com Shopify no Brasil:
+            <strong
+              >Mercado Pago, Pagar.me, PagBank, Appmax, PagBrasil e
+              EBANX</strong
+            >.
+          </p>
+          <h3>Onde ver a lista oficial de gateways disponíveis</h3>
+          <p>
+            A Shopify mantém uma
+            <a href="https://www.shopify.com/br/gateways-de-pagamento"
+              >página oficial de provedores de pagamento</a
+            >. Nela, basta digitar "Brasil" no filtro por país para ver os
+            provedores que atendem o Brasil.
+          </p>
+          <p>
+            A lista definitiva, com o que realmente pode ser ativado para a
+            Ovni, fica dentro do Shopify. É possível criar uma conta de teste
+            gratuita, configurar o endereço da loja no Brasil e abrir
+            <strong>Configurações &gt; Pagamentos</strong>. Ali aparecem os
+            gateways disponíveis. Segundo a própria Shopify, integrar um gateway
+            não tem custo: cada gateway cobra as próprias taxas.
+          </p>
+          <p>
+            Um detalhe que muda a experiência do cliente: em alguns gateways o
+            pagamento acontece dentro do checkout da loja. Em outros, o cliente
+            é levado para a página do gateway e depois volta. Isso pode variar
+            até entre cartão, Pix e boleto no mesmo gateway, e é um dos pontos
+            da verificação técnica.
+          </p>
+          <p>
+            Isso significa que a escolha e a negociação ficam com a Ovni. A
+            Rafaela pode comparar as propostas e negociar diretamente com essas
+            empresas. Alguns publicam uma tabela de taxas fixa (Mercado Pago e
+            PagBank, por exemplo). Outros, como Pagar.me e Cielo, fazem proposta
+            sob medida conforme o volume.
+          </p>
+          <p>Pontos para comparar entre as propostas:</p>
+          <div class="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ponto</th>
+                  <th>Por que importa para a Ovni</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Taxa no cartão à vista e parcelado</th>
+                  <td>
+                    89% do faturamento veio do cartão, e 81% do valor no cartão
+                    foi parcelado (84% desde outubro de 2024, com vendas em até
+                    10x)
+                  </td>
+                </tr>
+                <tr>
+                  <th>Taxa no Pix e no boleto</th>
+                  <td>
+                    O Pix não teve nenhuma recusa e costuma ser o meio mais
+                    barato
+                  </td>
+                </tr>
+                <tr>
+                  <th>Prazo de repasse e custo da antecipação</th>
+                  <td>
+                    Define quando o dinheiro de cada venda cai na conta. Compare
+                    as taxas sempre no mesmo prazo: uma taxa de parcelado que já
+                    inclui receber tudo em 15 dias não é comparável a uma em que
+                    o dinheiro entra parcela por parcela, como no Wix
+                  </td>
+                </tr>
+                <tr>
+                  <th>Antifraude e aprovação de cartões</th>
+                  <td>
+                    Houve 5 recusas no cartão. Três clientes concluíram a compra
+                    depois, e uma venda se perdeu
+                  </td>
+                </tr>
+                <tr>
+                  <th>Mensalidade ou tarifa fixa do gateway</th>
+                  <td>
+                    Com poucas vendas por mês, uma tarifa fixa pesa mais que a
+                    taxa percentual
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Um ponto não muda com a negociação: além do que o gateway cobrar, a
+            Shopify cobra a própria taxa sobre cada venda por usar um gateway
+            externo (2% no plano Basic). Negociar com o gateway reduz só a parte
+            dele.
+          </p>
+          <p>
+            No Wix a situação é diferente: o Wix Pagamentos já vem embutido. A
+            Ovni também poderia usar PagBank ou Mercado Pago no Wix. Nesse caso,
+            o provedor externo cobra as próprias taxas. Não encontramos na
+            documentação do Wix uma taxa adicional equivalente à da Shopify, mas
+            vale confirmar as condições do plano antes de contratar.
+          </p>
+
+          <h3>Gateways selecionados para comparação</h3>
+          <p>
+            A própria Shopify publicou em agosto de 2026 uma
+            <a
+              href="https://www.shopify.com/br/blog/melhores-gateways-de-pagamento"
+              >comparação de gateways</a
+            >
+            com taxas de referência, prós e contras. Considerando o perfil da
+            Ovni (operação atualmente pequena, vendas no Brasil, muito
+            parcelamento e Pix com peso crescente), quatro foram selecionados
+            para uma comparação inicial. As taxas abaixo são valores de partida
+            divulgados; a taxa final depende do prazo de recebimento e da
+            negociação.
+          </p>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Gateway</th>
+                <th>Taxas de referência</th>
+                <th>Por que considerar</th>
+                <th>Pontos de atenção</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Mercado Pago</th>
+                <td>
+                  De 0,99% a 4,99%, conforme o meio de pagamento e o prazo de
+                  recebimento, mais tarifa fixa por venda
+                </td>
+                <td>
+                  Integração oficial com a Shopify. Pix, boleto e cartão. Muito
+                  conhecido pelo comprador brasileiro. Sem mensalidade
+                </td>
+                <td>
+                  O checkout transparente exige integração via API. A taxa sobe
+                  quanto mais rápido se quer receber
+                </td>
+              </tr>
+              <tr>
+                <th>PagBank</th>
+                <td>
+                  Cartão a partir de 3,99% + R$ 0,40 (recebendo em 30 dias). Pix
+                  a partir de 1,89%. Boleto R$ 3,49
+                </td>
+                <td>
+                  Voltado a pequenas e médias empresas. Integração oficial.
+                  Parcelamento em até 12x. Sem mensalidade no checkout
+                </td>
+                <td>
+                  Pix mais caro que nos concorrentes. Recursos variam conforme o
+                  conector usado
+                </td>
+              </tr>
+              <tr>
+                <th>Pagar.me</th>
+                <td>
+                  Dois planos prontos, ambos com todas as parcelas recebidas em
+                  até 15 dias e custos operacionais incluídos. Modo à Vista:
+                  crédito à vista 4,39%, parcelado em 6x 14,99%. Modo Parcelado:
+                  crédito à vista 5,59%, parcelado em 6x 13,59%. Pix 1,19%.
+                  Boleto R$ 3,49. Há também planos negociáveis
+                </td>
+                <td>
+                  Checkout transparente e bom antifraude. Relatórios de
+                  conciliação
+                </td>
+                <td>
+                  Pensado para operações médias e grandes. Não publica tabela
+                  completa
+                </td>
+              </tr>
+              <tr>
+                <th>Stripe</th>
+                <td>
+                  Cartão nacional 3,99% + R$ 0,39. Pix 1,19%. Boleto R$ 3,45.
+                  Cartão internacional com cerca de 2% a mais
+                </td>
+                <td>
+                  Tabela pública e clara. Aceita cartões estrangeiros, o que o
+                  Wix Pagamentos não aceita. Útil se a Ovni quiser vender para
+                  fora
+                </td>
+                <td>
+                  Recursos avançados exigem conhecimento técnico. Menos
+                  tradicional entre compradores brasileiros
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose gateway">
+          <p class="small muted">
+            Ficaram de fora: o Shopify Payments, que não está disponível no
+            Brasil; a Cielo, voltada a empresas médias e grandes com lojas
+            físicas e sem tabela pública; e o PayPal, com taxa de cartão mais
+            alta (4,79% + tarifa fixa) e pouca base de usuários no Brasil.
+            Nenhum dos quatro publica a taxa do parcelado de forma simples: esse
+            é o número mais importante a pedir na cotação, já que mais de 80% do
+            valor vendido no cartão pela Ovni foi parcelado.
+          </p>
+        </div>
+        <div class="prose">
+          <h3>Frete: como cada plataforma calcula no checkout</h3>
+          <p>
+            Hoje a loja da Ovni no Wix calcula o frete dos Correios (PAC e
+            SEDEX) com o app Meu Frete com Correios, por R$ 9,90 por mês, usando
+            a tarifa de balcão, sem contrato próprio. No Wix, esse tipo de app
+            funciona no plano atual, sem restrição.
+          </p>
+          <p>
+            No Shopify é diferente. O frete calculado em tempo real por apps de
+            transportadoras depende de um recurso que a Shopify libera só nos
+            planos Advanced e Plus; no Grow, ele pode ser adicionado com taxa
+            mensal extra ou com faturamento anual. O plano Basic não tem esse
+            recurso. A exceção é a Frenet (e o app Correios – SEDEX – PAC), que
+            funciona no Basic porque recebeu esse acesso antes de a Shopify
+            fechá-lo, em 2023.
+          </p>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Caminho no Shopify</th>
+                <th>Custo extra por mês</th>
+                <th>Ponto de atenção</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Basic + Frenet, plano Iniciante</th>
+                <td>R$ 0</td>
+                <td>
+                  Serve para quem não tem contrato com os Correios, como a Ovni
+                  hoje. As etiquetas passam a ser compradas pela Frenet, com os
+                  contratos dela. Depende da exceção que a Shopify mantém para a
+                  Frenet
+                </td>
+              </tr>
+              <tr>
+                <th>Basic + Frenet, plano Profissional</th>
+                <td>US$ 19, cerca de R$ 105</td>
+                <td>Só é necessário com contrato próprio com os Correios</td>
+              </tr>
+              <tr>
+                <th>Basic + frete fixo por região</th>
+                <td>R$ 0</td>
+                <td>
+                  Sem app, mas o valor cobrado do cliente não é exato por CEP
+                </td>
+              </tr>
+              <tr>
+                <th>Grow anual + Melhor Envio ou outro app</th>
+                <td>O plano sobe de cerca de R$ 77 para cerca de R$ 215</td>
+                <td>
+                  Libera qualquer app de frete, e a taxa da Shopify por venda
+                  cai para 1%
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="prose small muted">
+          Nas duas plataformas, a Ovni paga hoje a tarifa de balcão, que é o
+          preço mais alto dos Correios. Serviços como Frenet e Melhor Envio usam
+          contratos com desconto e podem reduzir o frete cobrado do cliente.
+          Vale verificar se há apps desse tipo também no Wix App Market.
+        </p>
+      </section>
+
+      <section id="simulador">
+        <h2>Simulador</h2>
+        <p class="prose">
+          Ajuste o faturamento e o mix de pagamentos para ver o custo mensal em
+          cada plataforma. Os valores iniciais usam o mix real da fase mais
+          recente da loja, de outubro de 2024 a dezembro de 2025, calculado pelo
+          valor vendido (87% cartão e 13% Pix), e não pelo número de vendas.
+        </p>
+
+        <div class="sim">
+          <div class="presets" role="group" aria-label="Cenários prontos">
+            <button class="chip" data-rev="1300">
+              Ritmo 2024–2025, R$ 1.300/mês
+            </button>
+            <button class="chip" data-rev="3000">R$ 3 mil/mês</button>
+            <button class="chip" data-rev="10000" aria-pressed="true">
+              R$ 10 mil/mês
+            </button>
+            <button class="chip" data-rev="30000">R$ 30 mil/mês</button>
+          </div>
+
+          <div class="simgrid">
+            <form id="simform" onsubmit="return false;">
+              <div class="field">
+                <label for="rev"
+                  >Faturamento mensal <output id="revOut"></output
+                ></label>
+                <input
+                  type="range"
+                  id="rev"
+                  min="0"
+                  max="50000"
+                  step="100"
+                  value="10000"
+                />
+              </div>
+              <div class="field">
+                <label for="card"
+                  >Faturamento no cartão <output id="cardOut"></output
+                ></label>
+                <input
+                  type="range"
+                  id="card"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="87"
+                />
+              </div>
+              <div class="field">
+                <label for="pix"
+                  >Faturamento no Pix <output id="pixOut"></output
+                ></label>
+                <input
+                  type="range"
+                  id="pix"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="13"
+                />
+              </div>
+              <p class="small muted" id="boletoLine"></p>
+              <p class="warn" id="mixWarn" role="status"></p>
+
+              <div class="row2">
+                <div class="field">
+                  <label for="shopPlan">Plano Shopify</label>
+                  <select id="shopPlan">
+                    <option value="basic">Basic</option>
+                    <option value="grow">Grow</option>
+                    <option value="advanced">Advanced</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="billing">Cobrança Shopify</label>
+                  <select id="billing">
+                    <option value="monthly">Mensal</option>
+                    <option value="annual" selected>Anual</option>
+                  </select>
+                </div>
+              </div>
+
+              <details>
+                <summary>Premissas</summary>
+                <div class="field" style="margin-top: 1rem">
+                  <label for="gwPreset">Preencher taxas do gateway com</label>
+                  <select id="gwPreset">
+                    <option value="">
+                      Exemplo genérico (4% à vista, R$ 0,39, Pix 1%, boleto R$
+                      2,99)
+                    </option>
+                    <option value="stripe">Stripe, tabela pública</option>
+                    <option value="pagbank">PagBank, taxas de partida</option>
+                    <option value="pagarme">
+                      Pagar.me, plano Modo Parcelado
+                    </option>
+                  </select>
+                </div>
+                <p class="small muted" id="presetNote">
+                  Escolha um gateway para preencher as taxas com valores de
+                  referência. O parcelado fica como premissa, exceto no
+                  Pagar.me, que publica essa taxa.
+                </p>
+                <div class="row2" style="margin-top: 1rem">
+                  <div class="field">
+                    <label for="ticket">Ticket médio no cartão (R$)</label
+                    ><input
+                      type="number"
+                      id="ticket"
+                      value="993"
+                      min="1"
+                      step="1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="ticketBol">Ticket médio no boleto (R$)</label
+                    ><input
+                      type="number"
+                      id="ticketBol"
+                      value="929"
+                      min="1"
+                      step="1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="usd">Dólar (R$)</label
+                    ><input
+                      type="number"
+                      id="usd"
+                      value="5.50"
+                      min="1"
+                      step="0.05"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="wixBrl">Plano Wix (R$/mês)</label
+                    ><input
+                      type="number"
+                      id="wixBrl"
+                      value="32"
+                      min="0"
+                      step="1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="wixApps">Apps no Wix (R$/mês)</label
+                    ><input
+                      type="number"
+                      id="wixApps"
+                      value="9.90"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="shopApps">Apps no Shopify (R$/mês)</label
+                    ><input
+                      type="number"
+                      id="shopApps"
+                      value="0"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="margin"
+                      >Margem antes das taxas de pagamento (%)</label
+                    ><input
+                      type="number"
+                      id="margin"
+                      value="50"
+                      min="1"
+                      max="100"
+                      step="1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="parc"
+                      >Cartão parcelado (% do valor no cartão)</label
+                    ><input
+                      type="number"
+                      id="parc"
+                      value="84"
+                      min="0"
+                      max="100"
+                      step="1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="gwCard">Gateway, crédito à vista (%)</label
+                    ><input
+                      type="number"
+                      id="gwCard"
+                      value="4"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="gwParc">Gateway, crédito parcelado (%)</label
+                    ><input
+                      type="number"
+                      id="gwParc"
+                      value="6"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="gwFix"
+                      >Gateway, tarifa fixa por venda no cartão (R$)</label
+                    ><input
+                      type="number"
+                      id="gwFix"
+                      value="0.39"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="gwPix">Gateway, Pix (%)</label
+                    ><input
+                      type="number"
+                      id="gwPix"
+                      value="1"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="gwBol">Gateway, boleto (R$ por boleto)</label
+                    ><input
+                      type="number"
+                      id="gwBol"
+                      value="2.99"
+                      min="0"
+                      step="0.01"
+                    />
+                  </div>
+                </div>
+                <p class="small muted">
+                  Os valores de gateway são exemplos para simulação, não taxas
+                  de um gateway específico. Substitua pelos números das
+                  propostas recebidas. O parcelado usa uma taxa média única; na
+                  prática ela muda com o número de parcelas e com quem paga os
+                  juros. Os valores iniciais de mix, parcelamento e ticket vêm
+                  da fase mais recente da loja, de outubro de 2024 a dezembro de
+                  2025: 87% do valor no cartão e 13% no Pix, e 84% do valor no
+                  cartão parcelado (R$ 14.186 de R$ 16.885; por quantidade, 13
+                  de 17 vendas). No Wix, a taxa do parcelado é a mesma do à
+                  vista. O número de vendas é uma média mensal estimada,
+                  dividindo o faturamento de cada meio pelo ticket informado (R$
+                  993 no cartão, pelo histórico recente; no boleto, sem
+                  histórico, usa-se o ticket geral de R$ 929), por isso pode ser
+                  fracionado. As tarifas fixas por venda são calculadas sobre
+                  essa média. Plano Wix: valor real da fatura da Ovni (Essencial
+                  anual, R$ 384 por ano), e apps no Wix: o app de frete dos
+                  Correios. Shopify: preços para lojas no Brasil, convertidos
+                  pelo dólar informado; a cobrança anual vem selecionada para
+                  comparar com o plano anual do Wix. Apps no Shopify começam em
+                  zero, o que corresponde ao cenário Basic + Frenet no plano
+                  Iniciante, sem contrato com os Correios; veja a seção de
+                  frete. O simulador não inclui antecipação de recebíveis.
+                </p>
+              </details>
+            </form>
+
+            <div aria-live="polite">
+              <p class="small muted" style="margin: 0 0 0.5rem">
+                Cenário ilustrativo, calculado com as premissas ao lado.
+              </p>
+              <p class="verdict" id="verdict"></p>
+              <div class="bars">
+                <div class="bar wix">
+                  <span>Wix</span>
+                  <div class="track"><div class="fill" id="barWix"></div></div>
+                  <b id="totWix"></b>
+                </div>
+                <div class="bar shop">
+                  <span>Shopify</span>
+                  <div class="track"><div class="fill" id="barShop"></div></div>
+                  <b id="totShop"></b>
+                </div>
+              </div>
+              <div class="scroll breakdown">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Custo por mês</th>
+                      <th class="num">Wix</th>
+                      <th class="num">Shopify</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bd"></tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Total</th>
+                      <td class="num" id="fWix"></td>
+                      <td class="num" id="fShop"></td>
+                    </tr>
+                    <tr>
+                      <th>Total em 12 meses</th>
+                      <td class="num" id="yWix"></td>
+                      <td class="num" id="yShop"></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <p class="small" id="breakeven"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="front">
+        <h2>Front-end</h2>
+        <div class="prose">
+          <p>
+            A referência principal é a home da
+            <a href="https://gufram.it/">Gufram</a>: uma grade longa de produtos
+            guiada por imagem, com um seletor entre duas visualizações (Griglia,
+            a grade, e Spazio, uma visualização mais livre) e um menu enxuto com
+            Produtos, História, Autores, Exposições, News e Contato. O site da
+            Gufram roda em WordPress, então ele serve de referência de design,
+            não de plataforma.
+          </p>
+          <p>
+            Tecnicamente, nada disso depende do motor de e-commerce. O que muda
+            entre as plataformas é o controle sobre o código e como a equipe
+            edita o conteúdo depois do lançamento. Como o conteúdo será mantido
+            por pessoas que não programam, o formato headless (front em React
+            separado da plataforma) foi descartado: cada página nova ou mudança
+            de layout dependeria de desenvolvimento.
+          </p>
+        </div>
+
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Abordagem</th>
+                <th>Como a equipe edita</th>
+                <th>Pontos fortes</th>
+                <th>Pontos de atenção</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  Wix Studio, reconstruído do zero <br /><span class="tag"
+                    >viável</span
+                  >
+                </th>
+                <td>
+                  Pelo painel do CMS do Wix (produtos, coleções, arquivo,
+                  textos). O editor visual fica restrito por permissão
+                </td>
+                <td>
+                  Menor custo de taxas. Sem migração de plataforma. A equipe já
+                  conhece o painel
+                </td>
+                <td>
+                  O editor dá muita liberdade e o design pode quebrar sem
+                  permissões bem definidas. Menos controle de performance e de
+                  HTML
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Shopify com tema customizado <br /><span class="tag"
+                    >viável</span
+                  >
+                </th>
+                <td>
+                  Pelo editor de temas, usando seções feitas sob medida, e pelo
+                  admin de produtos e conteúdo
+                </td>
+                <td>
+                  Design mais protegido. Checkout e apps nativos. Mais espaço
+                  para crescer
+                </td>
+                <td>
+                  Taxa extra por venda. Mensalidade em dólar. Migração do
+                  catálogo e redirecionamento das URLs antigas
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Headless (React) em qualquer uma <br /><span class="tag off"
+                    >descartado</span
+                  >
+                </th>
+                <td>
+                  Só produtos e textos pelo painel. Layout e páginas novas
+                  dependem de código
+                </td>
+                <td>Liberdade total de design</td>
+                <td>
+                  Manutenção contínua de desenvolvimento. Apps exigem integração
+                  manual
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose">
+          <h3>Como o trabalho fica reaproveitável</h3>
+          <p>
+            A visualização Spazio e outros componentes mais ricos serão escritos
+            como web components em TypeScript, independentes da plataforma. O
+            sistema de design (cores, tipografia e espaçamento) também é
+            definido uma única vez. Se a Ovni começar no Wix e migrar para o
+            Shopify quando as vendas crescerem, essa parte do front vai junto.
+          </p>
+        </div>
+      </section>
+
+      <section id="decisoes">
+        <h2>Decisões em aberto</h2>
+        <p class="prose">
+          Cada item tem uma sugestão de responsável. Os marcados como Rafaela
+          são decisões de negócio que definem a plataforma.
+        </p>
+        <div class="filters" role="group" aria-label="Filtrar por responsável">
+          <button class="chip" data-f="all" aria-pressed="true">Todas</button>
+          <button class="chip" data-f="rafaela">Rafaela</button>
+          <button class="chip" data-f="paula">Paula</button>
+          <button class="chip" data-f="robert">Com o Robert</button>
+        </div>
+        <ol class="decisions">
+          <li data-o="rafaela">
+            <div>
+              <h3>Meta de faturamento após o relançamento</h3>
+              <p>
+                Com os custos reais da Ovni e as premissas padrão, o Wix sai
+                mais barato em qualquer faturamento. A meta define o tamanho
+                dessa diferença: cerca de R$ 85 por mês no ritmo de 2024–2025 e
+                cerca de R$ 400 por mês com R$ 10 mil de faturamento. O valor
+                exato depende das taxas do gateway e do peso do parcelamento.
+                Use o simulador com a meta e com as propostas dos gateways.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Por que as vendas pararam em 2026</h3>
+              <p>
+                A loja vendeu R$ 7,5 mil no último trimestre de 2025 e nada
+                desde janeiro. Entender a causa (estoque, divulgação, site fora
+                do ar, mudança de canal de venda) define o que o relançamento
+                precisa resolver primeiro.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Site pago no Wix que não está no ar</h3>
+              <p>
+                Além da loja que está no ar (o site "Ovni Cmpny 2024", no plano
+                Essencial), o Wix cobra R$ 50 por mês pelo plano Completo de
+                outro site, o "OVNI.CMPNY". São R$ 600 por ano. Vale confirmar
+                se ele ainda é necessário (por exemplo, se segura o domínio
+                ovni.company) antes de cancelar, independentemente da decisão de
+                plataforma.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Frete: continuar na tarifa de balcão?</h3>
+              <p>
+                A loja calcula e paga o frete pela tarifa de balcão dos
+                Correios, a mais cara. Serviços como Frenet e Melhor Envio
+                oferecem contratos com desconto, o que pode baixar o frete
+                cobrado do cliente nas duas plataformas. No Shopify Basic, a
+                Frenet é também o caminho para ter frete calculado no checkout
+                sem mudar de plano.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>
+                Plataforma: reconstruir no Wix Studio ou migrar para o Shopify
+              </h3>
+              <p>
+                No custo, o Wix vence. O Shopify teria que se justificar pelo
+                design mais protegido, pelo checkout e pelo espaço para crescer,
+                em troca de custo maior e da migração.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Regras de parcelamento</h3>
+              <p>
+                Desde outubro de 2024, 13 das 17 vendas no cartão foram
+                parceladas, seis delas em 7x e uma em 10x. Falta definir até
+                quantas vezes parcelar e se a Ovni absorve os juros ou repassa
+                ao cliente.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Existem vendas fora do site?</h3>
+              <p>
+                Vendas por Instagram, WhatsApp ou Pix direto não aparecem no
+                relatório do Wix. Se forem relevantes, o volume real é maior e a
+                conta muda.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>Prazo de recebimento</h3>
+              <p>
+                No Wix, as vendas no cartão são repassadas em 30 dias, com
+                antecipação paga disponível. No Shopify, o prazo depende do
+                gateway. Vale confirmar o que funciona para o caixa da Ovni.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="rafaela">
+            <div>
+              <h3>
+                Escolher e negociar o gateway, se o Shopify estiver na mesa
+              </h3>
+              <p>
+                O gateway é uma empresa externa que a própria Ovni contrata,
+                como Mercado Pago, Pagar.me, PagBank ou Appmax. Pedir propostas
+                e negociar taxas, prazo de repasse e antifraude. A taxa
+                negociada no cartão muda o resultado do simulador. Os pontos de
+                comparação estão na seção de taxas.
+              </p>
+            </div>
+            <div class="owner" data-o="rafaela">Rafaela</div>
+          </li>
+          <li data-o="paula">
+            <div>
+              <h3>Verificação técnica dos gateways candidatos</h3>
+              <p>
+                Antes de fechar contrato, confirmar para cada gateway: se ele
+                aparece em Configurações &gt; Pagamentos numa conta de teste com
+                endereço no Brasil; se cartão, Pix e boleto acontecem dentro do
+                checkout ou redirecionam o cliente, verificando meio por meio;
+                suporte a parcelamento; e atualização correta do status dos
+                pedidos.
+              </p>
+            </div>
+            <div class="owner" data-o="paula">Paula</div>
+          </li>
+          <li data-o="paula">
+            <div>
+              <h3>Taxa de recusa no checkout atual</h3>
+              <p>
+                Levantado: 5 pagamentos recusados desde 2021, todos no cartão,
+                de 4 clientes. Três deles concluíram a compra depois; uma venda
+                se perdeu. Nenhuma recusa no Pix. Vale dar destaque ao Pix no
+                checkout novo e comparar a aprovação de cartões entre gateways.
+              </p>
+            </div>
+            <div class="owner" data-o="paula">Paula, concluído</div>
+          </li>
+          <li data-o="paula">
+            <div>
+              <h3>Testar o frete da Frenet no Shopify Basic</h3>
+              <p>
+                Se o Shopify seguir em avaliação, confirmar numa conta de teste
+                que a Frenet mostra PAC e SEDEX no checkout do plano Basic e na
+                página do produto, e comparar as cotações com as da tarifa de
+                balcão usando a caixa padrão da Ovni.
+              </p>
+            </div>
+            <div class="owner" data-o="paula">Paula</div>
+          </li>
+          <li data-o="paula">
+            <div>
+              <h3>Prova de conceito da grade e da Spazio</h3>
+              <p>
+                Depois da escolha da plataforma: montar a grade e a visualização
+                Spazio como web component e validar desempenho no celular.
+              </p>
+            </div>
+            <div class="owner" data-o="paula">Paula</div>
+          </li>
+          <li data-o="robert">
+            <div>
+              <h3>Quem edita o site depois do lançamento</h3>
+              <p>
+                Definir quem da equipe mantém produtos, coleções e arquivo, e
+                com qual nível de permissão, para proteger o design.
+              </p>
+            </div>
+            <div class="owner" data-o="robert">Paula e Robert</div>
+          </li>
+          <li data-o="robert">
+            <div>
+              <h3>Comportamento da visualização Spazio</h3>
+              <p>
+                A referência mostra o seletor entre grade e Spazio, mas o
+                comportamento da Spazio na Ovni ainda precisa ser desenhado
+                antes do desenvolvimento.
+              </p>
+            </div>
+            <div class="owner" data-o="robert">Paula e Robert</div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="fontes">
+        <h2>Fontes</h2>
+        <ul class="sources">
+          <li>
+            <a
+              href="https://support.wix.com/pt/article/wix-pagamentos-brasil-transfer%C3%AAncia-de-valores-recebidos-e-taxas-operacionais"
+              >Wix: taxas e prazos do Wix Pagamentos Brasil</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://support.wix.com/pt/article/wix-pagamentos-brasil-criar-uma-conta"
+              >Wix: criar uma conta Wix Pagamentos Brasil</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.shopify.com/br/blog/melhores-gateways-de-pagamento"
+              >Shopify: 7 melhores gateways de pagamento (agosto de 2026)</a
+            >
+          </li>
+          <li>
+            <a href="https://www.shopify.com/br/gateways-de-pagamento"
+              >Shopify: provedores e gateways de pagamento (página oficial)</a
+            >
+          </li>
+          <li>
+            <a href="https://base.com/pt-BR/blog/shopify-pagamentos-brasil/"
+              >Checkout e pagamentos da Shopify no Brasil (setembro de 2026)</a
+            >
+          </li>
+          <li>
+            <a href="https://base.com/pt-BR/blog/shopify-guia-completo/"
+              >Shopify no Brasil: guia completo para 2026</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://mestredosite.com/gateway-de-pagamento-shopify-brasil-o-guia-completo-de-2026-e-por-que-usar-apenas-um-e-erro/"
+              >Gateway de pagamento Shopify Brasil: faixas de taxa em 2026</a
+            >
+          </li>
+          <li>
+            <a href="https://base.com/pt-BR/blog/quanto-custa-shopify/"
+              >Quanto custa a Shopify: planos para lojas no Brasil em 2026</a
+            >
+          </li>
+          <li>
+            Histórico de cobranças do Wix da Ovni, exportado em 02/10/2026
+          </li>
+          <li>
+            <a
+              href="https://help.shopify.com/pt-BR/manual/fulfillment/setup/shipping-rates/third-party-carrier-calculated-shipping"
+              >Shopify: frete calculado por transportadoras de terceiros
+              (requisito de plano)</a
+            >
+          </li>
+          <li>
+            <a href="https://apps.shopify.com/frenet-7?locale=pt-BR"
+              >Frenet na Shopify App Store: planos e preços</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://community.shopify.com/t/como-frenet-e-correios-sedex-pac-exibem-frete-dinamico-no-basic-sem-ccs/659074"
+              >Comunidade Shopify: por que a Frenet funciona no plano Basic</a
+            >
+          </li>
+          <li>
+            Configuração do app Meu Frete com Correios no Wix da Ovni,
+            consultada em 02/10/2026
+          </li>
+          <li><a href="https://gufram.it/">Gufram, referência de design</a></li>
+          <li>
+            Dois relatórios de Finanças &gt; Pagamentos do Wix da Ovni: setembro
+            de 2021 a julho de 2024, e julho de 2024 até outubro de 2026,
+            exportado com filtro até a data atual (última venda em dezembro de
+            2025)
+          </li>
+          <li>
+            <a href="https://pagarme-website.pagar.me/"
+              >Pagar.me: planos e taxas oficiais</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        Valores de setembro de 2026, sujeitos a mudança. Taxas de gateway no
+        Shopify são faixas de mercado e devem ser confirmadas por cotação.
+      </footer>
     </div>
-  </div>
-</section>
 
-<section id="front">
-  <h2>Front-end</h2>
-  <div class="prose">
-    <p>A referência principal é a home da <a href="https://gufram.it/">Gufram</a>: uma grade longa de produtos guiada por imagem, com um seletor entre duas visualizações (Griglia, a grade, e Spazio, uma visualização mais livre) e um menu enxuto com Produtos, História, Autores, Exposições, News e Contato. O site da Gufram roda em WordPress, então ele serve de referência de design, não de plataforma.</p>
-    <p>Tecnicamente, nada disso depende do motor de e-commerce. O que muda entre as plataformas é o controle sobre o código e como a equipe edita o conteúdo depois do lançamento. Como o conteúdo será mantido por pessoas que não programam, o formato headless (front em React separado da plataforma) foi descartado: cada página nova ou mudança de layout dependeria de desenvolvimento.</p>
-  </div>
+    <script>
+      (function () {
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        var brl = new Intl.NumberFormat("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+          maximumFractionDigits: 0,
+        });
+        var brl2 = new Intl.NumberFormat("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+        var plans = {
+          basic: { m: 19, a: 14, fee: 0.02, name: "Basic" },
+          grow: { m: 52, a: 39, fee: 0.01, name: "Grow" },
+          advanced: { m: 399, a: 299, fee: 0.006, name: "Advanced" },
+        };
+        var num = function (id, d) {
+          var v = parseFloat($(id).value);
+          return isNaN(v) ? d : v;
+        };
+        var fmt = function (v) {
+          return Math.abs(v) < 100 ? brl2.format(v) : brl.format(v);
+        };
 
-  <div class="scroll">
-    <table>
-      <thead><tr><th>Abordagem</th><th>Como a equipe edita</th><th>Pontos fortes</th><th>Pontos de atenção</th></tr></thead>
-      <tbody>
-        <tr>
-          <th>Wix Studio, reconstruído do zero <br><span class="tag">viável</span></th>
-          <td>Pelo painel do CMS do Wix (produtos, coleções, arquivo, textos). O editor visual fica restrito por permissão</td>
-          <td>Menor custo de taxas. Sem migração de plataforma. A equipe já conhece o painel</td>
-          <td>O editor dá muita liberdade e o design pode quebrar sem permissões bem definidas. Menos controle de performance e de HTML</td>
-        </tr>
-        <tr>
-          <th>Shopify com tema customizado <br><span class="tag">viável</span></th>
-          <td>Pelo editor de temas, usando seções feitas sob medida, e pelo admin de produtos e conteúdo</td>
-          <td>Design mais protegido. Checkout e apps nativos. Mais espaço para crescer</td>
-          <td>Taxa extra por venda. Mensalidade em dólar. Migração do catálogo e redirecionamento das URLs antigas</td>
-        </tr>
-        <tr>
-          <th>Headless (React) em qualquer uma <br><span class="tag off">descartado</span></th>
-          <td>Só produtos e textos pelo painel. Layout e páginas novas dependem de código</td>
-          <td>Liberdade total de design</td>
-          <td>Manutenção contínua de desenvolvimento. Apps exigem integração manual</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        function calc(changed) {
+          var rev = num("rev", 0),
+            card = num("card", 0),
+            pix = num("pix", 0);
+          if (card + pix > 100) {
+            if (changed === "pix") {
+              card = 100 - pix;
+              $("card").value = card;
+              $("mixWarn").textContent =
+                "Cartão e Pix passavam de 100%. O cartão foi ajustado.";
+            } else {
+              pix = 100 - card;
+              $("pix").value = pix;
+              $("mixWarn").textContent =
+                "Cartão e Pix passavam de 100%. O Pix foi ajustado.";
+            }
+          } else {
+            $("mixWarn").textContent = "";
+          }
+          var bol = Math.max(0, 100 - card - pix);
+          $("revOut").textContent = brl.format(rev);
+          $("cardOut").textContent = card + "%";
+          $("pixOut").textContent = pix + "%";
+          $("boletoLine").textContent =
+            "Faturamento no boleto: " +
+            bol +
+            "% (o que sobra do cartão e do Pix)";
 
-  <div class="prose">
-    <h3>Como o trabalho fica reaproveitável</h3>
-    <p>A visualização Spazio e outros componentes mais ricos serão escritos como web components em TypeScript, independentes da plataforma. O sistema de design (cores, tipografia e espaçamento) também é definido uma única vez. Se a Ovni começar no Wix e migrar para o Shopify quando as vendas crescerem, essa parte do front vai junto.</p>
-  </div>
-</section>
+          var ticket = Math.max(1, num("ticket", 640)),
+            ticketBol = Math.max(1, num("ticketBol", 589)),
+            usd = num("usd", 5.5),
+            wixBrl = num("wixBrl", 32),
+            wixApps = num("wixApps", 9.9),
+            shopApps = num("shopApps", 0);
+          var parc = Math.min(100, Math.max(0, num("parc", 75))) / 100,
+            gwParc = num("gwParc", 6) / 100,
+            gwFix = num("gwFix", 0.39),
+            gwBol = num("gwBol", 2.99);
+          var margin = Math.max(1, num("margin", 50)) / 100,
+            gwC = num("gwCard", 4) / 100,
+            gwP = num("gwPix", 1) / 100;
+          var p = plans[$("shopPlan").value],
+            billing = $("billing").value;
+          var rC = (rev * card) / 100,
+            rP = (rev * pix) / 100,
+            rB = (rev * bol) / 100;
+          var nC = rC / ticket,
+            nB = rB / ticketBol;
 
-<section id="decisoes">
-  <h2>Decisões em aberto</h2>
-  <p class="prose">Cada item tem uma sugestão de responsável. Os marcados como Rafaela são decisões de negócio que definem a plataforma.</p>
-  <div class="filters" role="group" aria-label="Filtrar por responsável">
-    <button class="chip" data-f="all" aria-pressed="true">Todas</button>
-    <button class="chip" data-f="rafaela">Rafaela</button>
-    <button class="chip" data-f="paula">Paula</button>
-    <button class="chip" data-f="robert">Com o Robert</button>
-  </div>
-  <ol class="decisions">
-    <li data-o="rafaela">
-      <div><h3>Meta de faturamento após o relançamento</h3>
-      <p>É o dado que decide se as taxas importam. No ritmo atual a diferença é pequena. Com faturamento maior, o Wix tende a sair mais barato, mas o valor exato depende das taxas do gateway e do peso do parcelamento. Use o simulador com a meta e com as propostas dos gateways.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="rafaela">
-      <div><h3>Plataforma: reconstruir no Wix Studio ou migrar para o Shopify</h3>
-      <p>Depende da meta acima e de quanto vale ter o design mais protegido e mais espaço para crescer no Shopify, em troca da taxa extra e da migração.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="rafaela">
-      <div><h3>Regras de parcelamento</h3>
-      <p>Oito das doze vendas no cartão foram parceladas. Falta definir até quantas vezes parcelar e se a Ovni absorve os juros ou repassa ao cliente.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="rafaela">
-      <div><h3>Existem vendas fora do site?</h3>
-      <p>Vendas por Instagram, WhatsApp ou Pix direto não aparecem no relatório do Wix. Se forem relevantes, o volume real é maior e a conta muda.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="rafaela">
-      <div><h3>Prazo de recebimento</h3>
-      <p>No Wix, as vendas no cartão são repassadas em 30 dias, com antecipação paga disponível. No Shopify, o prazo depende do gateway. Vale confirmar o que funciona para o caixa da Ovni.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="rafaela">
-      <div><h3>Escolher e negociar o gateway, se o Shopify estiver na mesa</h3>
-      <p>O gateway é uma empresa externa que a própria Ovni contrata, como Mercado Pago, Pagar.me, PagBank ou Appmax. Pedir propostas e negociar taxas, prazo de repasse e antifraude. A taxa negociada no cartão muda o resultado do simulador. Os pontos de comparação estão na seção de taxas.</p></div>
-      <div class="owner" data-o="rafaela">Rafaela</div>
-    </li>
-    <li data-o="paula">
-      <div><h3>Verificação técnica dos gateways candidatos</h3>
-      <p>Antes de fechar contrato, confirmar para cada gateway: se ele aparece em Configurações &gt; Pagamentos numa conta de teste com endereço no Brasil; se cartão, Pix e boleto acontecem dentro do checkout ou redirecionam o cliente, verificando meio por meio; suporte a parcelamento; e atualização correta do status dos pedidos.</p></div>
-      <div class="owner" data-o="paula">Paula</div>
-    </li>
-    <li data-o="paula">
-      <div><h3>Taxa de recusa no checkout atual</h3>
-      <p>Levantado: 3 pagamentos recusados, todos no cartão, vindos de 2 clientes. Um deles pagou depois; o outro tentou duas vezes e a venda se perdeu. A amostra é pequena, mas reforça dar destaque ao Pix no checkout novo, que não teve nenhuma recusa, e avaliar a aprovação de cartões ao comparar gateways.</p></div>
-      <div class="owner" data-o="paula">Paula, concluído</div>
-    </li>
-    <li data-o="paula">
-      <div><h3>Prova de conceito da grade e da Spazio</h3>
-      <p>Depois da escolha da plataforma: montar a grade e a visualização Spazio como web component e validar desempenho no celular.</p></div>
-      <div class="owner" data-o="paula">Paula</div>
-    </li>
-    <li data-o="robert">
-      <div><h3>Quem edita o site depois do lançamento</h3>
-      <p>Definir quem da equipe mantém produtos, coleções e arquivo, e com qual nível de permissão, para proteger o design.</p></div>
-      <div class="owner" data-o="robert">Paula e Robert</div>
-    </li>
-    <li data-o="robert">
-      <div><h3>Comportamento da visualização Spazio</h3>
-      <p>A referência mostra o seletor entre grade e Spazio, mas o comportamento da Spazio na Ovni ainda precisa ser desenhado antes do desenvolvimento.</p></div>
-      <div class="owner" data-o="robert">Paula e Robert</div>
-    </li>
-  </ol>
-</section>
+          var w = {
+            card: rC * 0.037 + 0.3 * nC,
+            pix: rP * 0.0095,
+            bol: 2.99 * nB,
+            plat: 0,
+            plan: wixBrl,
+            apps: wixApps,
+          };
+          var s = {
+            card: rC * (1 - parc) * gwC + rC * parc * gwParc + gwFix * nC,
+            pix: rP * gwP,
+            bol: gwBol * nB,
+            plat: rev * p.fee,
+            plan: (billing === "annual" ? p.a : p.m) * usd,
+            apps: shopApps,
+          };
+          var tw = w.card + w.pix + w.bol + w.plat + w.plan + w.apps,
+            ts = s.card + s.pix + s.bol + s.plat + s.plan + s.apps;
 
-<section id="fontes">
-  <h2>Fontes</h2>
-  <ul class="sources">
-    <li><a href="https://support.wix.com/pt/article/wix-pagamentos-brasil-transfer%C3%AAncia-de-valores-recebidos-e-taxas-operacionais">Wix: taxas e prazos do Wix Pagamentos Brasil</a></li>
-    <li><a href="https://support.wix.com/pt/article/wix-pagamentos-brasil-criar-uma-conta">Wix: criar uma conta Wix Pagamentos Brasil</a></li>
-    <li><a href="https://www.shopify.com/br/blog/melhores-gateways-de-pagamento">Shopify: 7 melhores gateways de pagamento (agosto de 2026)</a></li>
-    <li><a href="https://www.shopify.com/br/gateways-de-pagamento">Shopify: provedores e gateways de pagamento (página oficial)</a></li>
-    <li><a href="https://base.com/pt-BR/blog/shopify-pagamentos-brasil/">Checkout e pagamentos da Shopify no Brasil (setembro de 2026)</a></li>
-    <li><a href="https://base.com/pt-BR/blog/shopify-guia-completo/">Shopify no Brasil: guia completo para 2026</a></li>
-    <li><a href="https://mestredosite.com/gateway-de-pagamento-shopify-brasil-o-guia-completo-de-2026-e-por-que-usar-apenas-um-e-erro/">Gateway de pagamento Shopify Brasil: faixas de taxa em 2026</a></li>
-    <li><a href="https://www.printkk.com/pt/blog/articles/how-much-does-it-cost-to-sell-on-shopify">Planos e mensalidades do Shopify em 2026</a></li>
-    <li><a href="https://www.pixpa.com/pt/blog/best-wix-alternatives">Planos de e-commerce do Wix em 2026</a></li>
-    <li><a href="https://gufram.it/">Gufram, referência de design</a></li>
-    <li>Exportação de Finanças &gt; Pagamentos do Wix da Ovni, setembro de 2021 a julho de 2024</li>
-  </ul>
-</section>
+          var rows = [
+            ["Cartão", w.card, s.card],
+            ["Pix", w.pix, s.pix],
+            ["Boleto", w.bol, s.bol],
+            [
+              "Taxa da plataforma (" +
+                (p.fee * 100).toString().replace(".", ",") +
+                "% no " +
+                p.name +
+                ")",
+              w.plat,
+              s.plat,
+            ],
+            ["Mensalidade do plano", w.plan, s.plan],
+            ["Apps", w.apps, s.apps],
+          ];
+          $("bd").innerHTML = rows
+            .map(function (r) {
+              return (
+                "<tr><th>" +
+                r[0] +
+                '</th><td class="num">' +
+                fmt(r[1]) +
+                '</td><td class="num">' +
+                fmt(r[2]) +
+                "</td></tr>"
+              );
+            })
+            .join("");
+          $("fWix").textContent = fmt(tw);
+          $("fShop").textContent = fmt(ts);
+          $("yWix").textContent = brl.format(tw * 12);
+          $("yShop").textContent = brl.format(ts * 12);
+          $("totWix").textContent = fmt(tw);
+          $("totShop").textContent = fmt(ts);
+          var mx = Math.max(tw, ts, 1);
+          $("barWix").style.width = (tw / mx) * 100 + "%";
+          $("barShop").style.width = (ts / mx) * 100 + "%";
 
-<footer>Valores de setembro de 2026, sujeitos a mudança. Taxas de gateway no Shopify são faixas de mercado e devem ser confirmadas por cotação.</footer>
-</div>
+          var d = ts - tw,
+            pct = rev > 0 ? (Math.abs(d) / rev) * 100 : 0;
+          var cheaper = d >= 0 ? "O Wix" : "O Shopify";
+          $("verdict").innerHTML =
+            Math.abs(d) < 1
+              ? "As duas plataformas custam praticamente o mesmo."
+              : cheaper +
+                ' sai mais barato por mês em<span class="big">' +
+                brl.format(Math.abs(d)) +
+                "</span>" +
+                (rev > 0
+                  ? "o equivalente a " +
+                    pct.toFixed(1).replace(".", ",") +
+                    "% do faturamento, ou " +
+                    brl.format(Math.abs(d) * 12) +
+                    " em 12 meses."
+                  : "");
+          if (d > 0) {
+            var vS =
+                (card / 100) *
+                  ((1 - parc) * gwC + parc * gwParc + gwFix / ticket) +
+                (pix / 100) * gwP +
+                ((bol / 100) * gwBol) / ticketBol +
+                p.fee,
+              net = margin - vS;
+            $("breakeven").textContent =
+              net > 0
+                ? "Estimativa simplificada, que supõe mix, ticket e estrutura de taxas constantes: para cobrir essa diferença, o Shopify precisaria gerar cerca de " +
+                  brl.format(d / net) +
+                  " a mais de faturamento por mês. A conta considera margem de " +
+                  Math.round(margin * 100) +
+                  "% antes das taxas e desconta as taxas do Shopify sobre esse faturamento extra (cerca de " +
+                  (vS * 100).toFixed(1).replace(".", ",") +
+                  "%)."
+                : "Com essa margem, as taxas do Shopify consomem toda a margem das vendas extras.";
+          } else {
+            $("breakeven").textContent = "";
+          }
+        }
 
-<script>
-(function(){
-  var $=function(id){return document.getElementById(id)};
-  var brl=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
-  var brl2=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2});
-  var plans={basic:{m:39,a:29,fee:.02,name:'Basic'},grow:{m:105,a:79,fee:.01,name:'Grow'},advanced:{m:399,a:299,fee:.006,name:'Advanced'}};
-  var num=function(id,d){var v=parseFloat($(id).value);return isNaN(v)?d:v};
-  var fmt=function(v){return Math.abs(v)<100?brl2.format(v):brl.format(v)};
-
-  function calc(){
-    var rev=num('rev',0), card=num('card',0), pix=num('pix',0);
-    if(card+pix>100){pix=100-card;$('pix').value=pix;$('mixWarn').textContent='Cartão e Pix somavam mais de 100%. O Pix foi ajustado.';}
-    else{$('mixWarn').textContent='';}
-    var bol=Math.max(0,100-card-pix);
-    $('revOut').textContent=brl.format(rev);
-    $('cardOut').textContent=card+'%';
-    $('pixOut').textContent=pix+'%';
-    $('boletoLine').textContent='Faturamento no boleto: '+bol+'% (o que sobra do cartão e do Pix)';
-
-    var ticket=Math.max(1,num('ticket',640)), ticketBol=Math.max(1,num('ticketBol',589)), usd=num('usd',5.5), wixUsd=num('wixUsd',39);
-    var parc=Math.min(100,Math.max(0,num('parc',75)))/100, gwParc=num('gwParc',6)/100, gwFix=num('gwFix',.39), gwBol=num('gwBol',2.99);
-    var margin=Math.max(1,num('margin',50))/100, gwC=num('gwCard',4)/100, gwP=num('gwPix',1)/100;
-    var p=plans[$('shopPlan').value], billing=$('billing').value;
-    var rC=rev*card/100, rP=rev*pix/100, rB=rev*bol/100;
-    var nC=rC/ticket, nB=rB/ticketBol;
-
-    var w={card:rC*.037+.30*nC, pix:rP*.0095, bol:2.99*nB, plat:0, plan:wixUsd*usd};
-    var s={card:rC*(1-parc)*gwC+rC*parc*gwParc+gwFix*nC, pix:rP*gwP, bol:gwBol*nB, plat:rev*p.fee, plan:(billing==='annual'?p.a:p.m)*usd};
-    var tw=w.card+w.pix+w.bol+w.plat+w.plan, ts=s.card+s.pix+s.bol+s.plat+s.plan;
-
-    var rows=[['Cartão',w.card,s.card],['Pix',w.pix,s.pix],['Boleto',w.bol,s.bol],
-      ['Taxa da plataforma ('+(p.fee*100).toString().replace('.',',')+'% no '+p.name+')',w.plat,s.plat],['Mensalidade',w.plan,s.plan]];
-    $('bd').innerHTML=rows.map(function(r){return '<tr><th>'+r[0]+'</th><td class="num">'+fmt(r[1])+'</td><td class="num">'+fmt(r[2])+'</td></tr>'}).join('');
-    $('fWix').textContent=fmt(tw); $('fShop').textContent=fmt(ts);
-    $('yWix').textContent=brl.format(tw*12); $('yShop').textContent=brl.format(ts*12);
-    $('totWix').textContent=fmt(tw); $('totShop').textContent=fmt(ts);
-    var mx=Math.max(tw,ts,1);
-    $('barWix').style.width=(tw/mx*100)+'%'; $('barShop').style.width=(ts/mx*100)+'%';
-
-    var d=ts-tw, pct=rev>0?(Math.abs(d)/rev*100):0;
-    var cheaper=d>=0?'O Wix':'O Shopify';
-    $('verdict').innerHTML=(Math.abs(d)<1?'As duas plataformas custam praticamente o mesmo.':
-      cheaper+' sai mais barato por mês em<span class="big">'+brl.format(Math.abs(d))+'</span>'+
-      (rev>0?'o equivalente a '+pct.toFixed(1).replace('.',',')+'% do faturamento, ou '+brl.format(Math.abs(d)*12)+' em 12 meses.':''));
-    if(d>0){
-      var vS=rev>0?(s.card+s.pix+s.bol+s.plat)/rev:0, net=margin-vS;
-      $('breakeven').textContent=net>0?'Estimativa simplificada, que supõe mix, ticket e estrutura de taxas constantes: para cobrir essa diferença, o Shopify precisaria gerar cerca de '+brl.format(d/net)+' a mais de faturamento por mês. A conta considera margem de '+Math.round(margin*100)+'% antes das taxas e desconta as taxas do Shopify sobre esse faturamento extra (cerca de '+(vS*100).toFixed(1).replace('.',',')+'%).':'Com essa margem, as taxas do Shopify consomem toda a margem das vendas extras.';
-    } else { $('breakeven').textContent=''; }
-  }
-
-  ['rev','card','pix','ticket','ticketBol','usd','wixUsd','margin','parc','gwCard','gwParc','gwFix','gwPix','gwBol','shopPlan','billing'].forEach(function(id){
-    $(id).addEventListener('input',function(){
-      if(id==='rev'){document.querySelectorAll('.presets .chip').forEach(function(b){b.setAttribute('aria-pressed','false')});}
-      calc();
-    });
-  });
-  document.querySelectorAll('.presets .chip').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.presets .chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
-      b.setAttribute('aria-pressed','true');
-      $('rev').value=b.getAttribute('data-rev'); calc();
-    });
-  });
-  document.querySelectorAll('.filters .chip').forEach(function(b){
-    b.addEventListener('click',function(){
-      document.querySelectorAll('.filters .chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
-      b.setAttribute('aria-pressed','true');
-      var f=b.getAttribute('data-f');
-      document.querySelectorAll('.decisions li').forEach(function(li){li.hidden=!(f==='all'||li.getAttribute('data-o')===f)});
-    });
-  });
-  var presets={'':{gwCard:4,gwFix:.39,gwPix:1,gwBol:2.99},stripe:{gwCard:3.99,gwFix:.39,gwPix:1.19,gwBol:3.45},pagbank:{gwCard:3.99,gwFix:.40,gwPix:1.89,gwBol:3.49},pagarme:{gwCard:4.39,gwFix:0,gwPix:1.19,gwBol:3.49}};
-  $('gwPreset').addEventListener('change',function(){var v=presets[this.value];Object.keys(v).forEach(function(k){$(k).value=v[k]});
-    $('presetNote').textContent=this.value==='pagarme'?'Pagar.me: a tarifa fixa por venda não aparece na referência da Shopify, então ficou em zero. Confirme na cotação. O parcelado continua como premissa.':'As referências preenchem crédito à vista, tarifa fixa, Pix e boleto. O parcelado continua como premissa, porque nenhum desses gateways publica essa taxa de forma simples.';calc();});
-  calc();
-})();
-</script>
-</body>
+        [
+          "rev",
+          "card",
+          "pix",
+          "ticket",
+          "ticketBol",
+          "usd",
+          "wixBrl",
+          "wixApps",
+          "shopApps",
+          "margin",
+          "parc",
+          "gwCard",
+          "gwParc",
+          "gwFix",
+          "gwPix",
+          "gwBol",
+          "shopPlan",
+          "billing",
+        ].forEach(function (id) {
+          $(id).addEventListener("input", function () {
+            if (id === "rev") {
+              document.querySelectorAll(".presets .chip").forEach(function (b) {
+                b.setAttribute("aria-pressed", "false");
+              });
+            }
+            calc(id);
+          });
+        });
+        document.querySelectorAll(".presets .chip").forEach(function (b) {
+          b.addEventListener("click", function () {
+            document.querySelectorAll(".presets .chip").forEach(function (x) {
+              x.setAttribute("aria-pressed", "false");
+            });
+            b.setAttribute("aria-pressed", "true");
+            $("rev").value = b.getAttribute("data-rev");
+            calc();
+          });
+        });
+        document.querySelectorAll(".filters .chip").forEach(function (b) {
+          b.addEventListener("click", function () {
+            document.querySelectorAll(".filters .chip").forEach(function (x) {
+              x.setAttribute("aria-pressed", "false");
+            });
+            b.setAttribute("aria-pressed", "true");
+            var f = b.getAttribute("data-f");
+            document.querySelectorAll(".decisions li").forEach(function (li) {
+              li.hidden = !(f === "all" || li.getAttribute("data-o") === f);
+            });
+          });
+        });
+        var presets = {
+          "": { gwCard: 4, gwParc: 6, gwFix: 0.39, gwPix: 1, gwBol: 2.99 },
+          stripe: {
+            gwCard: 3.99,
+            gwParc: 6,
+            gwFix: 0.39,
+            gwPix: 1.19,
+            gwBol: 3.45,
+          },
+          pagbank: {
+            gwCard: 3.99,
+            gwParc: 6,
+            gwFix: 0.4,
+            gwPix: 1.89,
+            gwBol: 3.49,
+          },
+          pagarme: {
+            gwCard: 5.59,
+            gwParc: 13.59,
+            gwFix: 0,
+            gwPix: 1.19,
+            gwBol: 3.49,
+          },
+        };
+        $("gwPreset").addEventListener("change", function () {
+          var v = presets[this.value];
+          Object.keys(v).forEach(function (k) {
+            $(k).value = v[k];
+          });
+          $("presetNote").textContent =
+            this.value === "pagarme"
+              ? "Pagar.me, plano Modo Parcelado: 5,59% à vista e 13,59% em 6x, com custos operacionais já incluídos (por isso a tarifa fixa é zero) e todas as parcelas recebidas em até 15 dias. A taxa do parcelado muda com o número de parcelas. No Wix, uma venda parcelada é recebida parcela por parcela, então compare considerando também o prazo."
+              : this.value === ""
+                ? "Escolha um gateway para preencher as taxas com valores de referência. O parcelado fica como premissa, exceto no Pagar.me, que publica essa taxa."
+                : "As referências preenchem as taxas de partida divulgadas. Stripe e PagBank não publicam a taxa do parcelado de forma simples, então ela volta ao exemplo de 6%.";
+          calc();
+        });
+        calc();
+      })();
+    </script>
+  </body>
 </html>
